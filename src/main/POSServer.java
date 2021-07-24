@@ -40,7 +40,7 @@ public class POSServer {
 					//OutputStream writer2 = new OutputStream(connection.getOutputStream());
 					//Writer writer3 = new OutputStreamWriter(connection.getOutputStream());
 					// 클리이언트한테 쓰기
-					System.out.println("클라이언트한테 쓰기 시작");
+					System.out.println("클라이언트한테 쓰기 시작2");
 					writer.write("To Client From Server\n");
 					//writer.write("To Client From Server\n");
 					writer.flush();
