@@ -7,6 +7,7 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.Icon;
@@ -16,19 +17,22 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public class PosGUIMenuEditPanel extends JPanel implements ActionListener{
+public class PosGUIMenuEditPanel extends JPanel implements ActionListener, ChangeListener{
 	
 	private CardLayout cards;
 	private JFrame frame;
 	private JButton backButton;
+	private JButton addMenuButton;
 	private Menu menu;
 	private JSONArray menuJson;
 	private JTabbedPane tp;
-	private JPanel[] categoryPanel;
+	private List<JPanel> categoryPanel;
 	
 	public PosGUIMenuEditPanel(CardLayout cards, JFrame frame) {
 		this.setLayout(null);
@@ -40,7 +44,7 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener{
 		initializeCategoryPanel();
 		
 		tp.setBounds(50,50,400,400);
-		insertCategoryPanelIntoTabbedyPanel();
+		insertCategoryPanelIntoTabbedPanel();
 				
 		backButton = new JButton("BACK");
 		backButton.addActionListener(this);
@@ -51,10 +55,10 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener{
 
 	private void initializeCategoryPanel() {
 		int categorySize = menu.getCategorySize();
-		categoryPanel = new JPanel[categorySize];
+		categoryPanel = new ArrayList<JPanel>();
 		
 		for(int i=0;i<categorySize;i++) {
-			categoryPanel[i] = new JPanel();
+			JPanel menuPanel = new JPanel();
 			JSONObject obj = (JSONObject) menuJson.get(i);
 			JSONArray menuArr = (JSONArray)obj.get("menu");
 			for(int j=0;j<menuArr.size();j++) {
@@ -71,18 +75,21 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener{
 				JLabel priceLabel = new JLabel((String)food.get("price"));
 				foodPanel.add(foodLabel);
 				foodPanel.add(nameLabel);
-				foodPanel.add(priceLabel);
+				foodPanel.add(priceLabel);				
 											
-				categoryPanel[i].add(foodPanel);
+				menuPanel.add(foodPanel);
 			}
+			addMenuButton = new JButton("+");
+			menuPanel.add(addMenuButton);
+			categoryPanel.add(menuPanel);
 		}
 	}
 
-	public void insertCategoryPanelIntoTabbedyPanel() {
+	public void insertCategoryPanelIntoTabbedPanel() {
 		int categorySize = menu.getCategorySize();
 		List<String> categoryList = menu.getCategories();
 		for(int i=0;i<categorySize;i++) {
-			tp.add(categoryList.get(i),categoryPanel[i]);
+			tp.add(categoryList.get(i),categoryPanel.get(i));
 		}
 		JPanel plusPanel = new JPanel();
 		tp.add("+",plusPanel);
@@ -90,10 +97,16 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getSource()==backButton) {
+		if(e.getSource()==backButton) { // Back Button
 			cards.show(frame.getContentPane(), "mainPanel");
+		} else if(e.getSource()==addMenuButton) { // Menu Add Button
+			
 		}
+	}
+
+	@Override
+	public void stateChanged(ChangeEvent e) { // + Tab Click
+				
 	}
 
 }
