@@ -32,8 +32,10 @@ public class PosGUIMain extends JFrame implements ActionListener{
 		
 		JPanel mainPanel = new PosGUIMainPanel(cards, this);
 		JPanel QRPanel = new PosGUIQRPanel(cards, this);
-		pane.add(mainPanel,"main");
-		pane.add(QRPanel,"QR");
+		JPanel menuEditPanel = new PosGUIMenuEditPanel(cards, this);
+		pane.add(mainPanel,"mainPanel");
+		pane.add(QRPanel,"QRPanel");
+		pane.add(menuEditPanel, "menuEditPanel");
 		
 		setVisible(true);
 	}
@@ -44,12 +46,8 @@ public class PosGUIMain extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 	}
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new PosGUIMain();
 	}
-
-	
-
 }

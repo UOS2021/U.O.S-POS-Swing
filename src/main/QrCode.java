@@ -1,7 +1,11 @@
 package main;
 
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 
@@ -13,11 +17,17 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 
 public class QrCode {
+	
+	private File QrFile;
+	
 	public QrCode() {
+		 QrFile = new File("QRCODE.jpg");
+	}
+	
+	public void create() {
 		try {
-			
 			QRCodeWriter writer = new QRCodeWriter();
-	        String param = "uofmobile://action?targetIp=112.214.137.70&targetPort=13";
+	        String param = "uofmobile://action?targetIp=" + getMyIP() + "&targetPort=10003";
 	        param = new String(param.getBytes("UTF-8"), "ISO-8859-1");
 	        BitMatrix matrix = writer.encode(param, BarcodeFormat.QR_CODE, 500, 500);
 
@@ -30,9 +40,27 @@ public class QrCode {
 	        BufferedImage qrimage = MatrixToImageWriter.toBufferedImage(matrix, config);
 	        
 			ImageIO.write(qrimage, "jpg", new File("QRCODE.jpg"));
-			
 		} catch (Exception e) {
 			System.out.print(e.getMessage());
 		}
+	}
+	
+	public void delete() {
+		QrFile.delete();
+	}
+	
+	public boolean isExist() {
+		if(QrFile.exists()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public String getMyIP() throws IOException {
+		URL whatismyip = new URL("http://checkip.amazonaws.com");
+		BufferedReader in = new BufferedReader(new InputStreamReader(whatismyip.openStream()));
+		String ip = in.readLine();
+		return ip;
 	}
 }

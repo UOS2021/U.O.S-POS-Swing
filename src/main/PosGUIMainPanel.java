@@ -73,7 +73,9 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource()==QRButton) {
-			cards.next(frame.getContentPane());		
+			cards.show(frame.getContentPane(), "QRPanel");
+		} else if(e.getSource()==menuEditButton) {
+			cards.show(frame.getContentPane(), "menuEditPanel");
 		}
 	}
 }
