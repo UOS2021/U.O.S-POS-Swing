@@ -36,6 +36,7 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 	private JButton imgChooseButton;
 	private JButton menuSaveButton;
 	private List<JButton> addMenuButtonList;
+	private int addMenuButtonIdx;
 	
 	private Menu menu;
 	private JSONArray menuJson;
@@ -43,6 +44,11 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 	private List<JPanel> categoryPanel;
 	private JDialog addMenuDialog;
 	private JLabel chooseFoodLabel;
+	
+	private JTextArea nameTextArea;
+	private JTextArea descriptionTextArea;
+	private JTextArea priceTextArea;
+	private JFileChooser fc;
 	
 	public PosGUIMenuEditPanel(CardLayout cards, JFrame frame) {
 		this.setLayout(null);
@@ -111,10 +117,10 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		int addMenuButtonIdx = addMenuButtonList.indexOf(e.getSource()); 
 		if(e.getSource()==backButton) { // Back Button
 			cards.show(frame.getContentPane(), "mainPanel");
-		} else if(addMenuButtonIdx>=0) {
+		} else if(addMenuButtonList.indexOf(e.getSource())>=0) {
+			addMenuButtonIdx = addMenuButtonList.indexOf(e.getSource());
 			addMenuDialog = new JDialog(this.frame, "메뉴 추가", true);
 			addMenuDialog.setSize(300,500);
 			addMenuDialog.setLayout(new GridLayout(5,1));
@@ -125,9 +131,10 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 			imgChooseButton.addActionListener(this);
 			menuSaveButton = new JButton("Save");
 			menuSaveButton.addActionListener(this);
-			JTextArea nameTextArea = new JTextArea(2, 10);
-			JTextArea descriptionTextArea = new JTextArea(2,10);
-			JTextArea priceTextArea = new JTextArea(2,10);
+			
+			nameTextArea = new JTextArea(2, 10);
+			descriptionTextArea = new JTextArea(2,10);
+			priceTextArea = new JTextArea(2,10);
 			
 			JPanel foodPanel = new JPanel();
 			foodPanel.setLayout(new BorderLayout());
@@ -155,18 +162,22 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 			
 			addMenuDialog.setVisible(true);
 		}  else if(e.getSource()==imgChooseButton) { 
-			JFileChooser fc = new JFileChooser();
+			fc = new JFileChooser();
 			int i= fc.showOpenDialog(this);
 			if(i==JFileChooser.APPROVE_OPTION) {
 				File f = fc.getSelectedFile();
-				String filepath = f.getPath();
-				System.out.println(filepath);
-				
+				String filepath = f.getPath();				
 				ImageIcon icon = new ImageIcon(filepath);
 				chooseFoodLabel.setIcon(icon);
 			}
 		} else if(e.getSource()==menuSaveButton) {
-			
+			String name = nameTextArea.getText();
+			String price = priceTextArea.getText();
+			String description = descriptionTextArea.getText();
+			String[] arg = fc.getSelectedFile().toString().split("\\\\");
+			String img_url = "images\\"+arg[arg.length-1];
+			JSONObject addMenuJSON = menu.makeMenu(name, price, description, img_url);
+			menu.addMenu(addMenuJSON, addMenuButtonIdx);
 		}
 	}
 
