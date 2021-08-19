@@ -27,7 +27,8 @@ public class QrCode {
 	public void create() {
 		try {
 			QRCodeWriter writer = new QRCodeWriter();
-	        String param = "uofmobile://action?targetIp=" + getMyIP() + "&targetPort=10003";
+//	        String param = "uofmobile://action?targetIp=" + getMyIP() + "&targetPort=10003";
+			String param = "uofmobile://action?targetIp=112.214.137.70&targetPort=10003";
 	        param = new String(param.getBytes("UTF-8"), "ISO-8859-1");
 	        BitMatrix matrix = writer.encode(param, BarcodeFormat.QR_CODE, 500, 500);
 

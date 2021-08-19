@@ -1,0 +1,123 @@
+{
+    "response_code": "0007",
+    "message":
+    {
+        "company":
+        {
+            "name": "버거킹",
+            "type": "restaurant"
+        }, 
+        "category_list":
+        [
+            {
+                "category": "X",
+                "product_list":
+                [
+                    {
+                        "name": "몬스터X",
+                        "price": "8800",
+                        "desc": "",
+                        "image": "images/hamburger.png"
+                    },
+                    {
+                        "name": "통새우X",
+                        "price": "8800",
+                        "desc": "",
+                        "image": "images/hamburger.png"
+                    }
+                ],
+                "set_list":
+                [
+                ]
+            },
+            {
+                "category": "와퍼",
+                "product_list":
+                [
+                    {
+                        "name": "불고기와퍼",
+                        "price": "7000",
+                        "desc": "불에 직접 구운 순 쇠고기 패티가 들어간 와퍼에 달콤한 불고기 소스까지",
+                        "image": "images/hamburger.png"
+                    },
+                    {
+                        "name": "새우버거",
+                        "price": "2500",
+                        "desc": "다진 새우 패티가 들어간 버거",
+                        "image": "images/hamburger.png"
+                    }
+                ]
+                , "set_list":
+                [
+                ]
+            },
+            {
+                "category": "비프&치킨버거",
+                "product_list":
+                [
+                    {
+                        "name": "아기상어 새우버거",
+                        "price": "4800",
+                        "desc": "더 통통한 새우로 돌아왔다",
+                        "image": "images/hamburger.png"
+                    },
+                    {
+                        "name": "엄마상어 새우버거",
+                        "price": "5800",
+                        "desc": "더 통통한 새우로 돌아왔다",
+                        "image": "images/hamburger.png"
+                    }
+                ]
+                , "set_list":
+                [
+                ]
+            }
+            , {
+                "category": "사이드",
+                "product_list":
+                [
+                    {
+                        "name": "쉐이킹프라이 구운갈릭",
+                        "price": "2700",
+                        "desc": "구운 마늘의 깊은 풍미",
+                        "image": "images/hamburger.png"
+                    },
+                    {
+                        "name": "쉐이킹프라이 매콤치즈",
+                        "price": "2700",
+                        "desc": "고소한 치즈맛에 매콤함까지",
+                        "image": "images/hamburger.png"
+                    }
+                ],
+                "set_list":
+                [
+                ]
+            },
+            {
+                "category": "음료",
+                "product_list":
+                [
+                    {
+                        "name": "제로톡톡 청포도",
+                        "price": "2700",
+                        "desc": "제로 칼로리 100% 천연 과일향 드링크",
+                        "image": "images/hamburger.png"
+                    },
+                    {
+                        "name": "아이스 아메리카노",
+                        "price": "2700",
+                        "desc": "RA인증을 받은 자연을 담은 아메리카노",
+                        "image": "images/hamburger.png"
+                    }
+                ], 
+                "set_list":
+                [
+                ]
+            }
+        ]
+    }
+}
+
+{ 
+	"response_code" : "0004"
+}

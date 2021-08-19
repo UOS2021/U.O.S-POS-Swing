@@ -20,11 +20,14 @@ import javax.swing.JPanel;
 public class PosGUIMain extends JFrame implements ActionListener{
 	
 	private CardLayout cards = new CardLayout();
+	private POSServer server;
 	
-	PosGUIMain(){
+	PosGUIMain(POSServer serv){
 		setTitle("U.O.F POS");
 		setSize(800,600);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.server=serv;
+		server.start();
 		
 		// Card Panel
 		Container pane = this.getContentPane();
