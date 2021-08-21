@@ -141,8 +141,8 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 			categoryPanel.add(menuPanel);
 			i++;
 		}
-		repaint();
-		revalidate();
+		this.repaint();
+		this.revalidate();
 	}
 
 	@Override
@@ -206,7 +206,13 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 			String[] arg = fc.getSelectedFile().toString().split("\\\\");
 			String img_url = "images/"+arg[arg.length-1];
 			info.menu.addProduct(name,price,description,img_url,addMenuButtonIdx);
-			updateCategoryPanel();
+//			updateCategoryPanel();
+			info.update();
+			for(JPanel arr : categoryPanel) {
+				arr.revalidate();
+				arr.repaint();
+			}
+			System.out.println(info);
 			addMenuDialog.dispose();
 		}
 	}
