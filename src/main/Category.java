@@ -5,56 +5,42 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 public class Category{
-	private String name;
-	private ImageIcon img;
+	private String categoryName;
+	private JSONArray set_list;
 	
-	private Category parent;
-	private List<Category> siblings;
-	private List<Category> childrens;
+	private ArrayList<Product> product_list;
 	
-	
-	public Category(String name, ImageIcon img) {
-		this.name = name;
-		this.img = img;
-		
-		siblings = new ArrayList<Category>();
-		childrens = new ArrayList<Category>();
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public Category getParent() {
-		return parent;
-	}
-	
-	public List<Category> getSiblings(){
-		return parent.getChildrens();
-	}
-	
-	public List<Category> getChildrens(){
-		return childrens;
-	}
-	
-	public List<Category> getDescendants(){
-		return null;
-	}
-	
-	public void addChild(Category category) {
-		childrens.add(category);
-		category.parent = this;
-	}
-	
-	public void addChildren(List<Category> categories) {
-		childrens.addAll(categories);
-		for(Category category : categories) {
-			category.parent = this;
+	public Category(JSONObject category) {
+		product_list = new ArrayList<Product>();
+		categoryName = (String)category.get("category");
+		for(int i=0;i<((JSONArray)category.get("product_list")).size();i++) {
+			product_list.add(new Product((JSONObject)((JSONArray)category.get("product_list")).get(i)));
 		}
+		set_list = (JSONArray)category.get("set_list");
 	}
-	
-	public String toString() {
-		return name;
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public ArrayList<Product> getProductList() {
+		return product_list;
+	}
+
+	public JSONArray getSetList() {
+		return set_list;
+	}
+
+	public void addProduct(String name, String price, String description, String img_url) {
+//		Product add = new Product(name, price, description, img_url);
+//		product_list.add(add);
+//		
+//		
+//		
+//		return 
 	}
 }

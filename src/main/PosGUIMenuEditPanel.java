@@ -36,24 +36,26 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 	private JButton imgChooseButton;
 	private JButton menuSaveButton;
 	private List<JButton> addMenuButtonList;
+	private int addMenuButtonIdx;
 	
-	private Menu menu;
-	private JSONArray menuJson;
+	private Information info;
+	private JSONObject menuJson;
 	private JTabbedPane tp;
-	private List<JPanel> categoryPanel;
+	private ArrayList<JPanel> categoryPanel;
 	private JDialog addMenuDialog;
 	private JLabel chooseFoodLabel;
+	
+	private JTextArea nameTextArea;
+	private JTextArea descriptionTextArea;
+	private JTextArea priceTextArea;
+	private JFileChooser fc;
 	
 	public PosGUIMenuEditPanel(CardLayout cards, JFrame frame) {
 		this.setLayout(null);
 		this.cards = cards;
 		this.frame = frame;
-		menu = new Menu();
-		menuJson = menu.getMenuJSON();
-		tp = new JTabbedPane();
-		initializeCategoryPanel();
 		
-		tp.setBounds(50,50,400,400);
+		initializeCategoryPanel();		
 		insertCategoryPanelIntoTabbedPanel();
 				
 		backButton = new JButton("BACK");
@@ -65,30 +67,29 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 	}
 
 	private void initializeCategoryPanel() {
-		int categorySize = menu.getCategorySize();
+		info = new Information();
+		tp = new JTabbedPane();
+		tp.setBounds(50,50,400,400);
+		
 		categoryPanel = new ArrayList<JPanel>();
 		addMenuButtonList = new ArrayList<JButton>();
+		ArrayList<Category> category_list = info.menu.getCategoryList();
 		
-		for(int i=0;i<categorySize;i++) {
+		int i=0;
+		for(Category arr : category_list) {
 			JPanel menuPanel = new JPanel();
-			JSONObject obj = (JSONObject) menuJson.get(i);
-			JSONArray menuArr = (JSONArray)obj.get("menu");
-			for(int j=0;j<menuArr.size();j++) {
+			ArrayList<Product> product_list = arr.getProductList();
+			for(Product menu : arr.getProductList()) {
 				JPanel foodPanel = new JPanel();
 				foodPanel.setLayout(new GridLayout(3,1));
-				JSONObject food = (JSONObject)menuArr.get(j);
+				JLabel foodLabel = new JLabel(menu.getImage());				
+				JLabel nameLabel = new JLabel(menu.getName());
+				JLabel priceLabel = new JLabel(menu.getPrice());
 				
-				ImageIcon foodIcon = new ImageIcon((String)food.get("img_url"));
-				ImageIcon foodImg = new ImageIcon(
-						(foodIcon.getImage()).getScaledInstance(50, 50, Image.SCALE_SMOOTH)
-						);
-				JLabel foodLabel = new JLabel(foodImg);				
-				JLabel nameLabel = new JLabel((String)food.get("name"));
-				JLabel priceLabel = new JLabel((String)food.get("price"));
 				foodPanel.add(foodLabel);
 				foodPanel.add(nameLabel);
-				foodPanel.add(priceLabel);				
-											
+				foodPanel.add(priceLabel);
+				
 				menuPanel.add(foodPanel);
 			}
 			JButton addMenuButton = new JButton("+");
@@ -96,38 +97,73 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 			addMenuButtonList.add(addMenuButton);
 			menuPanel.add(addMenuButtonList.get(i));
 			categoryPanel.add(menuPanel);
+			i++;
 		}
 	}
 
 	public void insertCategoryPanelIntoTabbedPanel() {
-		int categorySize = menu.getCategorySize();
-		List<String> categoryList = menu.getCategories();
-		for(int i=0;i<categorySize;i++) {
-			tp.add(categoryList.get(i),categoryPanel.get(i));
+		ArrayList<Category> category_list = info.menu.getCategoryList();
+		
+		for(int i=0;i<info.menu.getCategoryListSize();i++) {
+			tp.add(category_list.get(i).getCategoryName(),categoryPanel.get(i));
 		}
 		JPanel plusPanel = new JPanel();
 		tp.add("+",plusPanel);
 	}
+	
+	public void updateCategoryPanel() {
+		info.update();
+		categoryPanel.clear();
+		addMenuButtonList.clear();
+		ArrayList<Category> category_list = info.menu.getCategoryList();
+		
+		int i=0;
+		for(Category arr : category_list) {
+			JPanel menuPanel = new JPanel();
+			ArrayList<Product> product_list = arr.getProductList();
+			for(Product menu : arr.getProductList()) {
+				JPanel foodPanel = new JPanel();
+				foodPanel.setLayout(new GridLayout(3,1));
+				JLabel foodLabel = new JLabel(menu.getImage());				
+				JLabel nameLabel = new JLabel(menu.getName());
+				JLabel priceLabel = new JLabel(menu.getPrice());
+				
+				foodPanel.add(foodLabel);
+				foodPanel.add(nameLabel);
+				foodPanel.add(priceLabel);
+				
+				menuPanel.add(foodPanel);
+			}
+			JButton addMenuButton = new JButton("+");
+			addMenuButton.addActionListener(this);
+			addMenuButtonList.add(addMenuButton);
+			menuPanel.add(addMenuButtonList.get(i));
+			categoryPanel.add(menuPanel);
+			i++;
+		}
+		this.repaint();
+		this.revalidate();
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		int addMenuButtonIdx = addMenuButtonList.indexOf(e.getSource()); 
 		if(e.getSource()==backButton) { // Back Button
 			cards.show(frame.getContentPane(), "mainPanel");
-		} else if(addMenuButtonIdx>=0) {
+		} else if(addMenuButtonList.indexOf(e.getSource())>=0) { // '+' Button
+			addMenuButtonIdx = addMenuButtonList.indexOf(e.getSource());
 			addMenuDialog = new JDialog(this.frame, "메뉴 추가", true);
 			addMenuDialog.setSize(300,500);
 			addMenuDialog.setLayout(new GridLayout(5,1));
-
 			
 			chooseFoodLabel = new JLabel();
 			imgChooseButton = new JButton("Open");
 			imgChooseButton.addActionListener(this);
 			menuSaveButton = new JButton("Save");
 			menuSaveButton.addActionListener(this);
-			JTextArea nameTextArea = new JTextArea(2, 10);
-			JTextArea descriptionTextArea = new JTextArea(2,10);
-			JTextArea priceTextArea = new JTextArea(2,10);
+			
+			nameTextArea = new JTextArea(2, 10);
+			descriptionTextArea = new JTextArea(2,10);
+			priceTextArea = new JTextArea(2,10);
 			
 			JPanel foodPanel = new JPanel();
 			foodPanel.setLayout(new BorderLayout());
@@ -154,19 +190,30 @@ public class PosGUIMenuEditPanel extends JPanel implements ActionListener, Chang
 			addMenuDialog.add(menuSaveButton);
 			
 			addMenuDialog.setVisible(true);
-		}  else if(e.getSource()==imgChooseButton) { 
-			JFileChooser fc = new JFileChooser();
+		}  else if(e.getSource()==imgChooseButton) { // 메뉴 추가 다이얼로그 Open 버튼
+			fc = new JFileChooser();
 			int i= fc.showOpenDialog(this);
-			if(i==JFileChooser.APPROVE_OPTION) {
+			if(i==JFileChooser.APPROVE_OPTION) { 
 				File f = fc.getSelectedFile();
-				String filepath = f.getPath();
-				System.out.println(filepath);
-				
+				String filepath = f.getPath();				
 				ImageIcon icon = new ImageIcon(filepath);
 				chooseFoodLabel.setIcon(icon);
 			}
-		} else if(e.getSource()==menuSaveButton) {
-			
+		} else if(e.getSource()==menuSaveButton) { // 메뉴 추가 다이얼로그 Save 버튼
+			String name = nameTextArea.getText();
+			String price = priceTextArea.getText();
+			String description = descriptionTextArea.getText();
+			String[] arg = fc.getSelectedFile().toString().split("\\\\");
+			String img_url = "images/"+arg[arg.length-1];
+			info.menu.addProduct(name,price,description,img_url,addMenuButtonIdx);
+//			updateCategoryPanel();
+			info.update();
+			for(JPanel arr : categoryPanel) {
+				arr.revalidate();
+				arr.repaint();
+			}
+			System.out.println(info);
+			addMenuDialog.dispose();
 		}
 	}
 
