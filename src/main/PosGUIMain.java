@@ -36,9 +36,13 @@ public class PosGUIMain extends JFrame implements ActionListener{
 		JPanel mainPanel = new PosGUIMainPanel(cards, this);
 		JPanel QRPanel = new PosGUIQRPanel(cards, this);
 		JPanel menuEditPanel = new PosGUIMenuEditPanel(cards, this);
+		JPanel menuEditTheaterPanel = new PosGUIMenuEditTheaterPanel(cards, this);
+		JPanel menuEditPCRoomPanel = new PosGUIMenuEditPCRoomPanel(cards, this);
 		pane.add(mainPanel,"mainPanel");
 		pane.add(QRPanel,"QRPanel");
 		pane.add(menuEditPanel, "menuEditPanel");
+		pane.add(menuEditTheaterPanel, "menuEditTheaterPanel");
+		pane.add(menuEditPCRoomPanel, "menuEditPCRoomPanel");
 		
 		setVisible(true);
 	}

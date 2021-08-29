@@ -11,8 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		POSServer server = new POSServer();
-		new PosGUIMain(server);
-		
+		new PosGUIMain(server);	
 	}
 
 }

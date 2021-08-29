@@ -17,17 +17,16 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 	private JButton QRButton;
 	private JButton menuEditButton;
 	private JButton orderButton;
-	private JButton test;
+	private JButton menuEditTheaterButton;
+	private JButton menuEditPCRoomButton;
 	private CardLayout cards;
 	private JFrame frame;
 	
 	PosGUIMainPanel(CardLayout cards, JFrame frame){
 		this.cards = cards;
 		this.frame = frame;
-		this.setLayout(null);
 		// Top Panel
 		JPanel northPanel = new JPanel();
-		northPanel.setBounds(0,0,800,20);
 		northPanel.setLayout(new BorderLayout());
 				
 		ImageIcon logoIcon = new ImageIcon("images/logo.png");
@@ -39,33 +38,26 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 				
 		// Center Panel	
 		JPanel centerPanel = new JPanel();
-		centerPanel.setLayout(null);
-		centerPanel.setBounds(50,70,700,400);
-		int x=0,y=0,width=100,height=100,hgap=10,vgap=10;
 		QRButton = new JButton("QR");
 		QRButton.addActionListener(this);
-		QRButton.setBounds(x,y,width,height);
 		
-		x+=width+hgap;
 		menuEditButton = new JButton("皋春包府");
-		menuEditButton.setBounds(x, y, width, height);
 		menuEditButton.addActionListener(this);
 		
-		x+=width+hgap;
 		orderButton = new JButton("林巩包府");
-		orderButton.setBounds(x, y, width, height);
 		orderButton.addActionListener(this);
 		
-		x=0;
-		y+=height+vgap;
-		test = new JButton("TEST");
-		test.setBounds(x,y,width,height);
-		test.addActionListener(this);
+		menuEditTheaterButton = new JButton("皋春包府(康拳包)");
+		menuEditTheaterButton.addActionListener(this);
+		
+		menuEditPCRoomButton = new JButton("皋春包府(PC规)");
+		menuEditPCRoomButton.addActionListener(this);
 		
 		centerPanel.add(QRButton);
 		centerPanel.add(menuEditButton);
 		centerPanel.add(orderButton);
-		centerPanel.add(test);
+		centerPanel.add(menuEditTheaterButton);
+		centerPanel.add(menuEditPCRoomButton);
 		add(centerPanel);
 	}
 	
@@ -76,6 +68,10 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 			cards.show(frame.getContentPane(), "QRPanel");
 		} else if(e.getSource()==menuEditButton) {
 			cards.show(frame.getContentPane(), "menuEditPanel");
+		} else if(e.getSource()==menuEditTheaterButton) {
+			cards.show(frame.getContentPane(), "menuEditTheaterPanel");
+		} else if(e.getSource() == menuEditPCRoomButton) {
+			cards.show(frame.getContentPane(), "menuEditPCRoomPanel");
 		}
 	}
 }
