@@ -11,7 +11,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		QrCode a = new QrCode();
+		//QrCode a = new QrCode();
+		OrderReceived b = new OrderReceived();
+		b.start();
 	}
 
 }
