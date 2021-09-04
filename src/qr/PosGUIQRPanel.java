@@ -1,4 +1,4 @@
-package main;
+package qr;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -26,7 +26,7 @@ public class PosGUIQRPanel extends JPanel implements ActionListener{
 	private QrCode QrCode;
 	private ImageIcon QRImage;
 	
-	PosGUIQRPanel(CardLayout cards, JFrame frame){
+	public PosGUIQRPanel(CardLayout cards, JFrame frame){
 		this.cards = cards;
 		this.frame = frame;
 		QrCode = new QrCode();

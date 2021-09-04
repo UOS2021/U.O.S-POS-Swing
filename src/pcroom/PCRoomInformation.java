@@ -1,4 +1,4 @@
-package main;
+package pcroom;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,21 +16,21 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class TheaterInformation {
+public class PCRoomInformation {
 	private File file;
+	private JSONParser parser;
+	
 	private JSONObject information;
 	private String response_code;
 	private JSONObject companyInfo;
-	private JSONArray movie_list;
 	private JSONArray category_list;
 	
 	
-	public TheaterInformation() {
+	public PCRoomInformation() {
+		file = new File("information_pcroom.json");
+		parser = new JSONParser();
+		
 		update();
-	}
-	
-	public JSONArray getMovieList() {
-		return movie_list;
 	}
 
 	public String getResponse_code() {
@@ -43,25 +43,20 @@ public class TheaterInformation {
 		return (String)companyInfo.get("type");
 	}
 	
+	public JSONArray getCategoryList() {
+		return category_list;
+	}
+	
 	public void update() {
 		try {
-			file = new File("information_theater.json");
-			JSONParser parser = new JSONParser();
 			information = (JSONObject)(parser.parse(new FileReader(file)));
-			
 			response_code = (String)information.get("response_code");
 			JSONObject message = ((JSONObject)information.get("message"));
 			companyInfo = (JSONObject)message.get("company");
-			movie_list = (JSONArray)message.get("movie_list");
 			category_list = (JSONArray)message.get("category_list");			
 		} catch (IOException | ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-	public String toString() {
-		return information.toString();
-	}
-	
 }

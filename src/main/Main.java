@@ -8,10 +8,8 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 public class Main {
-
 	public static void main(String[] args) {
 		POSServer server = new POSServer();
 		new PosGUIMain(server);	
 	}
-
 }

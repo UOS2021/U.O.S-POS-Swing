@@ -3,6 +3,9 @@ package main;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,7 +20,10 @@ import java.io.Writer;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+import java.util.Base64.Encoder;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -45,8 +51,6 @@ class POSThread extends Thread{
 	private BufferedReader reader;
 	private PrintWriter writer;
 	private JSONParser parser;
-	
-	private UserData userData;
 	
 	POSThread(Socket connection){
 		this.connection = connection;
@@ -84,6 +88,9 @@ class POSThread extends Thread{
 				case "0014": // 매장정보 및 주문가능목록
 					code0014();
 					break;
+				case "0015": // QR코드 이미지 요청
+					code0015();
+					break;
 				}
 			}
 		} catch (Exception e) {
@@ -91,7 +98,7 @@ class POSThread extends Thread{
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void code0000() {}
 	
 	private void code0011(JSONObject obj) { // 주문 요청
@@ -109,7 +116,6 @@ class POSThread extends Thread{
 		String id = (String) message.get("id");
 		String order_number = (String) message.get("android_key_value");
 		Card card = new Card(card_num, card_pw, card_cvc, card_due_date);
-		Order order = new Order(order_name, order_count);
 	}
 
 	private void code0012() { // 주문 취소
@@ -118,14 +124,40 @@ class POSThread extends Thread{
 
 	
 	public void code0014() throws FileNotFoundException, IOException, ParseException { // 매장정보 및 주문가능목록
-		sendOrderList();
+		JSONObject whole = (JSONObject)(parser.parse(new FileReader("information_theater.json")));
+		JSONArray categroy_list = ((JSONArray)((JSONObject)whole.get("message")).get("category_list"));
+		
+		// 이미지 주소 -> 이미지 데이터 변경
+		for(int i=0;i<categroy_list.size();i++) {
+			JSONObject category = (JSONObject)categroy_list.get(i);
+			JSONArray product_list = (JSONArray)category.get("product_list");
+			for(int j=0; j<product_list.size(); j++) {
+				JSONObject product = (JSONObject)product_list.get(j);
+				String image = (String)product.get("image");
+				File QRImage = new File(image);
+				byte[] imageBytes = ImgEncoder.extractBytes("QRCODE.jpg");
+				byte[] baseEncodingBytes = ImgEncoder.encodingBase64(imageBytes);
+				String  encodedImg = new String(baseEncodingBytes);
+				product.replace("image", encodedImg);
+			}
+		}
+		writer.println(whole.toJSONString());
 	}
 	
-	public void sendOrderList() throws FileNotFoundException, IOException, ParseException { // response_code 0007
-		JSONObject information = (JSONObject)(parser.parse(new FileReader("information.json")));
-		information.put("response_code", "0007");
-		writer.println(information.toJSONString());
-	}
-	
-	
+	private void code0015() throws IOException {
+		JSONObject data = new JSONObject();		
+		JSONObject message = new JSONObject();
+		File QRImage = new File("QRCODE.jpg");
+		
+		byte[] imageBytes = ImgEncoder.extractBytes("QRCODE.jpg");
+		byte[] baseEncodingBytes = ImgEncoder.encodingBase64(imageBytes);
+		
+		message.put("image", new String(baseEncodingBytes));
+		
+		data.put("response_code", "0028");
+		data.put("message",message);
+		
+		System.out.println(data.toJSONString());
+		writer.println(data.toJSONString());
+	}	
 }

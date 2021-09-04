@@ -17,6 +17,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import pcroom.PosGUIMenuEditPCRoomPanel;
+import qr.PosGUIQRPanel;
+import restaurant.PosGUIMenuEditRestaurantPanel;
+import theater.PosGUIMenuEditTheaterPanel;
+
 public class PosGUIMain extends JFrame implements ActionListener{
 	
 	private CardLayout cards = new CardLayout();
@@ -33,14 +38,16 @@ public class PosGUIMain extends JFrame implements ActionListener{
 		Container pane = this.getContentPane();
 		pane.setLayout(cards);
 		
+		JPanel loginPanel = new PosGUILogin(cards, this);
 		JPanel mainPanel = new PosGUIMainPanel(cards, this);
 		JPanel QRPanel = new PosGUIQRPanel(cards, this);
-		JPanel menuEditPanel = new PosGUIMenuEditPanel(cards, this);
+		JPanel menuEditRestaurantPanel = new PosGUIMenuEditRestaurantPanel(cards, this);
 		JPanel menuEditTheaterPanel = new PosGUIMenuEditTheaterPanel(cards, this);
 		JPanel menuEditPCRoomPanel = new PosGUIMenuEditPCRoomPanel(cards, this);
+		pane.add(loginPanel, "loginPanel");
 		pane.add(mainPanel,"mainPanel");
 		pane.add(QRPanel,"QRPanel");
-		pane.add(menuEditPanel, "menuEditPanel");
+		pane.add(menuEditRestaurantPanel, "menuEditRestaurantPanel");
 		pane.add(menuEditTheaterPanel, "menuEditTheaterPanel");
 		pane.add(menuEditPCRoomPanel, "menuEditPCRoomPanel");
 		
