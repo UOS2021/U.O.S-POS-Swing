@@ -1,4 +1,4 @@
-package main;
+package qr;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;

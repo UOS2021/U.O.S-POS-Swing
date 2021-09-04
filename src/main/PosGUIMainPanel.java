@@ -15,7 +15,7 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 	
 	private JButton cancelButton;
 	private JButton QRButton;
-	private JButton menuEditButton;
+	private JButton menuEditRestaurantButton;
 	private JButton orderButton;
 	private JButton menuEditTheaterButton;
 	private JButton menuEditPCRoomButton;
@@ -41,8 +41,8 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 		QRButton = new JButton("QR");
 		QRButton.addActionListener(this);
 		
-		menuEditButton = new JButton("메뉴관리");
-		menuEditButton.addActionListener(this);
+		menuEditRestaurantButton = new JButton("메뉴관리(음식점)");
+		menuEditRestaurantButton.addActionListener(this);
 		
 		orderButton = new JButton("주문관리");
 		orderButton.addActionListener(this);
@@ -54,7 +54,7 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 		menuEditPCRoomButton.addActionListener(this);
 		
 		centerPanel.add(QRButton);
-		centerPanel.add(menuEditButton);
+		centerPanel.add(menuEditRestaurantButton);
 		centerPanel.add(orderButton);
 		centerPanel.add(menuEditTheaterButton);
 		centerPanel.add(menuEditPCRoomButton);
@@ -66,8 +66,8 @@ public class PosGUIMainPanel extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource()==QRButton) {
 			cards.show(frame.getContentPane(), "QRPanel");
-		} else if(e.getSource()==menuEditButton) {
-			cards.show(frame.getContentPane(), "menuEditPanel");
+		} else if(e.getSource()==menuEditRestaurantButton) {
+			cards.show(frame.getContentPane(), "menuEditRestaurantPanel");
 		} else if(e.getSource()==menuEditTheaterButton) {
 			cards.show(frame.getContentPane(), "menuEditTheaterPanel");
 		} else if(e.getSource() == menuEditPCRoomButton) {

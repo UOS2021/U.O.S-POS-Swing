@@ -27,7 +27,7 @@
     } ],
     "company" : {
       "name" : "companyname",
-      "type" : "restaurant/pc/movie"
+      "type" : "movie"
     },
     "movie_list" : [ {
       "movie" : "다크나이트",
@@ -35,62 +35,43 @@
       "width" : "3",
       "seat_list" : [ {
         "code" : "A1",
-        "price" : 1000,
+        "price" : 0,
         "state" : 0
       }, {
         "code" : "A2",
-        "price" : 1000,
+        "price" : 0,
         "state" : 0
       }, {
         "code" : "A3",
-        "price" : 1000,
-        "state" : 2
-      }, {
-        "code" : "B1",
-        "price" : 1000,
-        "state" : 2
-      }, {
-        "code" : "B2",
-        "price" : 1000,
-        "state" : 2
-      }, {
-        "code" : "B3",
-        "price" : 1000,
-        "state" : 0
-      } ],
-      "time" : "10:00",
-      "height" : "2"
-    }, {
-      "movie" : "다크나이트",
-      "theater" : "1관",
-      "width" : "3",
-      "seat_list" : [ {
-        "code" : "A1",
-        "price" : 1000,
-        "state" : 0
-      }, {
-        "code" : "A2",
-        "price" : 1000,
-        "state" : 0
-      }, {
-        "code" : "A3",
-        "price" : 1000,
+        "price" : 0,
         "state" : 0
       }, {
         "code" : "B1",
-        "price" : 1000,
+        "price" : 0,
         "state" : 0
       }, {
         "code" : "B2",
-        "price" : 1000,
+        "price" : 0,
         "state" : 2
       }, {
         "code" : "B3",
-        "price" : 1000,
+        "price" : 0,
         "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 2
       } ],
       "time" : "10:00",
-      "height" : "2"
+      "height" : "3"
     }, {
       "movie" : "2123123",
       "theater" : "3",
@@ -162,6 +143,188 @@
       } ],
       "time" : "3",
       "height" : "4"
+    }, {
+      "movie" : "다크나이트",
+      "theater" : "1관",
+      "width" : "4",
+      "seat_list" : [ {
+        "code" : "A1",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "A2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B1",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "B2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C4",
+        "price" : 0,
+        "state" : 0
+      } ],
+      "time" : "10:00",
+      "height" : "3"
+    }, {
+      "movie" : "333",
+      "theater" : "1",
+      "width" : "5",
+      "seat_list" : [ {
+        "code" : "A1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F5",
+        "price" : 0,
+        "state" : 0
+      } ],
+      "time" : "2",
+      "height" : "6"
     } ]
   }
 }

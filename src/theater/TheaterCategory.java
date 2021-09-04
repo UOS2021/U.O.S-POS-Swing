@@ -1,10 +1,12 @@
-package main;
+package theater;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -31,26 +33,24 @@ public class TheaterCategory extends JPanel implements ActionListener{
 	
 		// boxPanel
 		private JPanel boxPanel;
+		private JTextField timeTF;
 		private JTextField movieNameTF;
 		private JTextField widthTF;
 		private JTextField heightTF;
-		private JTextField timeTF;
 		private JTextField theaterTF;
+		private JLabel timeLabel;
 		private JLabel movieNameLabel;
 		private JLabel widthLabel;
 		private JLabel heightLabel;
-		private JLabel timeLabel;
 		private JLabel theaterLabel;
 		private JButton seatCreateButton;
 		private JButton saveButton;
-		private JButton updateButton;
-		private JButton deleteButton;
 		
 		// seatPanel
 		private JPanel seatPanel;
 		private TheaterSeat[][] theaterSeat;
-		private int seatWidth;
-		private int seatHeight;
+		private int seatWidth=0;
+		private int seatHeight=0;
 		
 		public TheaterCategory() {			
 			// boxPanel Components
@@ -59,7 +59,6 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			
 			movieNameLabel = new JLabel("영화제목");
 			movieNameTF = new JTextField(20);
-//			movieNameTF.setText(movieName);
 			
 			widthLabel = new JLabel("가로");
 			widthTF = new JTextField(5);
@@ -77,10 +76,6 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			
 			seatCreateButton = new JButton("Creat");
 			seatCreateButton.addActionListener(this);
-			saveButton = new JButton("Save");
-			saveButton.addActionListener(this);
-			deleteButton = new JButton("Delete");
-			deleteButton.addActionListener(this);
 			
 			boxPanel.add(theaterTF);
 			boxPanel.add(theaterLabel);
@@ -93,8 +88,6 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			boxPanel.add(heightLabel);
 			boxPanel.add(heightTF);
 			boxPanel.add(seatCreateButton);
-			boxPanel.add(saveButton);
-			boxPanel.add(deleteButton);
 			
 			// seatPanel
 			seatPanel = new JPanel();
@@ -109,8 +102,8 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			String movieName = (String)movie.get("movie");
 			String time = (String)movie.get("time");
 			String theater = (String)movie.get("theater");
-			seatWidth = Integer.parseInt((String)movie.get("width"));
-			seatHeight = Integer.parseInt((String)movie.get("height"));
+			seatWidth = getInt((String)movie.get("width"));
+			seatHeight = getInt((String)movie.get("height"));
 			
 			
 			// boxPanel Components
@@ -130,18 +123,19 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			heightTF.setText(String.valueOf(seatHeight));
 			
 			timeTF = new JTextField(6);
-			timeLabel = new JLabel(time);
+			timeTF.setText(time);
+			timeLabel = new JLabel("시간");
 			
 			theaterTF = new JTextField(5);
-			theaterLabel = new JLabel(theater);
+			theaterTF.setText(theater);
+			theaterLabel = new JLabel("위치");
 			
 			seatCreateButton = new JButton("Creat");
 			seatCreateButton.addActionListener(this);
-			updateButton = new JButton("Update");
-			updateButton.addActionListener(this);
-			deleteButton = new JButton("Delete");
 			
+			boxPanel.add(theaterTF);
 			boxPanel.add(theaterLabel);
+			boxPanel.add(timeTF);
 			boxPanel.add(timeLabel);
 			boxPanel.add(movieNameLabel);
 			boxPanel.add(movieNameTF);
@@ -150,11 +144,14 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			boxPanel.add(heightLabel);
 			boxPanel.add(heightTF);
 			boxPanel.add(seatCreateButton);
-			boxPanel.add(updateButton);
-			boxPanel.add(deleteButton);
 			
 			// seatPanel
 			seatPanel = new JPanel();
+			if(seatWidth==0 || seatHeight==0){
+				this.add(boxPanel, BorderLayout.NORTH);
+				this.add(seatPanel, BorderLayout.CENTER);
+				return;
+			}
 			seatPanel.setLayout(new GridLayout(seatWidth, seatHeight));
 			
 			
@@ -181,7 +178,7 @@ public class TheaterCategory extends JPanel implements ActionListener{
 		
 		public void createSeat(int width, int height) throws FileNotFoundException {			
 			seatPanel.removeAll();
-			seatPanel.setLayout(new GridLayout(width, height));
+			seatPanel.setLayout(new GridLayout(height, width));
 			theaterSeat = new TheaterSeat[height][width];
 			for(int i=0;i<height;i++) {
 				for(int j=0;j<width;j++) {
@@ -242,46 +239,30 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			}
 		}
 		
-		private void categoryCreate() {
-			try {
-				FileReader reader = new FileReader("information_theater.json");
-				JSONParser parser = new JSONParser();
-				JSONObject whole = (JSONObject)parser.parse(reader);
-				reader.close();
-				
-				JSONObject message = (JSONObject)whole.get("message");
-				JSONArray movie_list = (JSONArray)message.get("movie_list");
-				
-				JSONObject addMovie = new JSONObject();
-				addMovie.put("movie", movieNameTF.getText());
-				addMovie.put("time",timeTF.getText());
-				addMovie.put("theater", theaterTF.getText());
-				addMovie.put("width",widthTF.getText());
-				addMovie.put("height",heightTF.getText());
-				JSONArray addSeatList = new JSONArray();
-				for(int i=0; i<Integer.parseInt(heightTF.getText()); i++) {
-					for(int j=0; j<Integer.parseInt(widthTF.getText()); j++) {
-						addSeatList.add(theaterSeat[i][j].getSeatJSON());
-					}
-				}
-				addMovie.put("seat_list", addSeatList);
-				movie_list.add(addMovie);
-				
-
-				FileWriter writer = new FileWriter("information_theater.json");
-				writer.write(whole.toJSONString());
-				writer.flush();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		private int getInt(String str) {
+			if(!str.equals("")) {
+				return Integer.parseInt(str);
 			}
-			
-			
+			else {
+				return 0;
+			}
 		}
 		
-		private void deleteCategory() {
-			// TODO Auto-generated method stub
-			
+		public JSONObject getMovie() {
+			JSONObject ret = new JSONObject();
+			ret.put("movie", movieNameTF.getText());
+			ret.put("time",timeTF.getText());
+			ret.put("theater", theaterTF.getText());
+			ret.put("width",widthTF.getText());
+			ret.put("height",heightTF.getText());
+			JSONArray addSeatList = new JSONArray();
+			for(int i=0; i<Integer.parseInt(heightTF.getText()); i++) {
+				for(int j=0; j<Integer.parseInt(widthTF.getText()); j++) {
+					addSeatList.add(theaterSeat[i][j].getSeatJSON());
+				}
+			}
+			ret.put("seat_list", addSeatList);
+			return ret;	
 		}
 		
 		@Override
@@ -297,17 +278,8 @@ public class TheaterCategory extends JPanel implements ActionListener{
 				} catch(NumberFormatException e1) {
 					e1.printStackTrace();
 				}	
-			} else if(e.getSource() == saveButton) { // Save Button
-				categoryCreate();
-			} else if(e.getSource() == updateButton) { // Update Button
-				categoryUpdate();
-			}
-			else if(e.getSource() == deleteButton) { // delete Button
-				deleteCategory();
 			}
 		}
-
 		
-
 		
 }
