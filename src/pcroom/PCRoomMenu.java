@@ -1,15 +1,20 @@
 package pcroom;
 
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.DecimalFormat;
 
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
@@ -21,12 +26,13 @@ public class PCRoomMenu extends JPanel {
 	private int index;
 	
 	private JLabel productImgLabel;
-	private JLabel productNameLabel;
+	private JTextArea productNameLabel;
 	private JLabel productPriceLabel;
-	private JLabel productDescLabel;
+	private JTextArea productDescLabel;
 	
 	public PCRoomMenu(JSONObject menu, int index) {
-		this.setLayout(new GridLayout(4,1));
+		this.setPreferredSize(new Dimension(100,345));
+		this.setLayout(null);
 		this.setBorder(new CompoundBorder(new TitledBorder(new LineBorder(Color.BLACK,2)), BorderFactory.createEmptyBorder(1, 1, 1, 1)));
 		this.menu = menu;
 		this.index = index;
@@ -34,21 +40,29 @@ public class PCRoomMenu extends JPanel {
 		productImgLabel = new JLabel(new ImageIcon(
 				((new ImageIcon((String)menu.get("image"))).getImage()).getScaledInstance(50, 50, Image.SCALE_SMOOTH)
 				));
-		productNameLabel = new JLabel((String)menu.get("name"));
-		productPriceLabel = new JLabel(String.valueOf((long)menu.get("price")));
-		productDescLabel = new JLabel((String)menu.get("desc"));
+		productImgLabel.setBounds(3,5,94,50);
+		productNameLabel = new JTextArea((String)menu.get("name"),5,2);
+		productNameLabel.setDisabledTextColor(Color.black);
+		productNameLabel.setLineWrap(true);
+		productNameLabel.disable();
+		productNameLabel.setBounds(3,55,94,40);
 		
-		productImgLabel.setHorizontalAlignment(JLabel.CENTER);
-		productNameLabel.setHorizontalAlignment(JLabel.CENTER);
-		productPriceLabel.setHorizontalAlignment(JLabel.CENTER);
-		productDescLabel.setHorizontalAlignment(JLabel.CENTER);
+		
+		productPriceLabel = new JLabel(new DecimalFormat("###,###").format((long)menu.get("price"))+"원");
+		productPriceLabel.setBounds(3,95,94,20);
+		
+		productDescLabel  = new JTextArea((String)menu.get("desc"),5,50);
+		productDescLabel.setLineWrap(true);
+		productDescLabel.setDisabledTextColor(Color.black);
+		productDescLabel.disable();
+		productDescLabel.setBounds(3,115,94,225);
 		
 		this.add(productImgLabel);
 		this.add(productNameLabel);
 		this.add(productPriceLabel);
 		this.add(productDescLabel);
 	}
-
+	
 	public int getIndex() {
 		return this.index;
 	}

@@ -64,8 +64,8 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			String movieName = (String)movie.get("movie");
 			String time = (String)movie.get("time");
 			String theater = (String)movie.get("theater");
-			seatWidth = getInt((String)movie.get("width"));
-			seatHeight = getInt((String)movie.get("height"));
+			seatWidth = ((Long)movie.get("width")).intValue();
+			seatHeight = ((Long)movie.get("height")).intValue();
 			
 			
 			// boxPanel Components
@@ -236,8 +236,8 @@ public class TheaterCategory extends JPanel implements ActionListener{
 			ret.put("movie", movieNameTF.getText());
 			ret.put("time",timeTF.getText());
 			ret.put("theater", theaterTF.getText());
-			ret.put("width",widthTF.getText());
-			ret.put("height",heightTF.getText());
+			ret.put("width",Integer.parseInt(widthTF.getText()));
+			ret.put("height",Integer.parseInt(heightTF.getText()));
 			JSONArray addSeatList = new JSONArray();
 			for(int i=0; i<Integer.parseInt(heightTF.getText()); i++) {
 				for(int j=0; j<Integer.parseInt(widthTF.getText()); j++) {

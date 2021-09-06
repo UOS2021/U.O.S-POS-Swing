@@ -48,6 +48,7 @@ public class select_options {
 	String comp_type;
 	private Main main;
 	private JPanel this_panel;
+	private JButton exitButton;
 
 	public select_options(Main main) {
 		this.main = main;
@@ -64,19 +65,30 @@ public class select_options {
 		this_panel.setLayout(null);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		this_panel.setBounds((int)screenSize.getWidth()/2-407, (int)screenSize.getHeight()/2-266, 814, 532);
-		this_panel.setBackground(new Color(255, 213, 79));
+		this_panel.setBackground(new Color(255, 200, 79));
 
 		JButton btn_qr = new JButton("QR코드 관리");
 		btn_qr.setFont(new Font("맑은 고딕", Font.BOLD, 36));
 		btn_qr.setBounds(501, 105, 272, 136);
 		this_panel.add(btn_qr);
+		
+		exitButton = new JButton("X");
+		exitButton.setBackground(new Color(255,1,51));
+		exitButton.addActionListener(new ActionListener() {	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		exitButton.setBounds(814-50, 0, 50, 50);
+		this_panel.add(exitButton);
 
 		// 주문 목록
 
 		orderList = new ArrayList<>();
 		entryList = new ArrayList<>();
 
-		module1 = new POSServer(this, orderList, entryList);
+		module1 = new POSServer(main.getCompanyType(),this, orderList, entryList);
 		module1.start();
 
 		String[] columnNames = { "순번", "메뉴", "접수시간" };
@@ -98,7 +110,21 @@ public class select_options {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				JTable t = (JTable) e.getSource();
-				if (e.getClickCount() == 2) {
+				 if(e.getButton() == MouseEvent.BUTTON3) {
+					 	System.out.println("우클릭");
+						// fcm
+						TableModel m = t.getModel();
+						Point pt = e.getPoint();
+						int i = t.rowAtPoint(pt);
+						int row = t.convertRowIndexToModel(i);
+						try {
+							Fcm.push(main.getCompanyName(), Integer.toString(row), entryList.get(row).getMyOrder().getFcmToken());
+						} catch (Exception e1) {
+							System.out.println("앙 오류띠");
+							e1.printStackTrace();
+						}
+					}
+				else if (e.getClickCount() == 2) {
 					TableModel m = t.getModel();
 					Point pt = e.getPoint();
 					int i = t.rowAtPoint(pt);
@@ -131,7 +157,9 @@ public class select_options {
 						JOptionPane.showMessageDialog(t, content, title, JOptionPane.INFORMATION_MESSAGE);
 
 					}
-				}
+				} 
+				
+				
 			}
 		});
 		jtable.getColumn("메뉴").setPreferredWidth(500);
@@ -157,7 +185,7 @@ public class select_options {
 		comp_type = main.getCompanyType();
 //		comp_type = "패스트푸드/프랜차이즈";
 //		comp_type = "영화관";
-		comp_type = "피시방";
+//		comp_type = "피시방";
 		switch (comp_type) {
 		case "패스트푸드/프랜차이즈":
 			comp_type = "음식점관리";

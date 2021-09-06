@@ -35,8 +35,7 @@ public class Main{
 	
 	private JFrame frame;
 	private JPanel panel;
-	
-	PosGUIMainPanel mainPanel;
+
 	PosGUIQRPanel QRPanel;
 	PosGUIMenuEditRestaurantPanel menuEditRestaurantPanel;
 	PosGUIMenuEditTheaterPanel menuEditTheaterPanel;
@@ -111,9 +110,6 @@ public class Main{
 		return this.frame;
 	}
 	
-	public PosGUIMainPanel getMainPanel() {
-		return this.mainPanel;
-	}
 	public PosGUIQRPanel getQRPanel() {
 		return this.QRPanel;
 	}

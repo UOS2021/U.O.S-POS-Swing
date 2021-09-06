@@ -163,24 +163,6 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 			JScrollPane scrollPane = new JScrollPane(pcRoomCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			tp.add(scrollPane, pcRoomCategory.getCategoryName());
 		}
-		
-		// 세트 메뉴 추가
-		set_list = info.getSetList();
-		PCRoomSetCategory pcroomSetCategory = new PCRoomSetCategory(set_list);
-		for(int i=0; i<set_list.size(); i++) {
-			JSONObject set = (JSONObject)set_list.get(i);
-			PCRoomSetMenu setMenuPanel = new PCRoomSetMenu(set, i);
-//			setMenuPanel.addMouseListener(new MouseAdapter() { // 음식 클릭 시 삭제
-//				public void mouseClicked(MouseEvent e) {
-//					PCRoomSetMenu delete_target = (PCRoomSetMenu)e.getSource();
-//					int menuIndex = delete_target.getIndex();
-//					deleteSetMenu(menuIndex);
-//				}
-//			});
-			pcroomSetCategory.add(setMenuPanel);
-		}
-		JScrollPane scrollPane = new JScrollPane(pcroomSetCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		tp.add(scrollPane, pcroomSetCategory.getCategoryName());
 	}
 
 	private void deleteMenu(int categoryIndex, int menuIndex) { // 메뉴 삭제
@@ -233,24 +215,6 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 			JScrollPane scrollPane = new JScrollPane(pcRoomCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			tp.add(scrollPane, pcRoomCategory.getCategoryName());
 		}
-		
-		// 세트 메뉴 추가
-		set_list = info.getSetList();
-		PCRoomSetCategory pcroomSetCategory = new PCRoomSetCategory(set_list);
-		for(int i=0; i<set_list.size(); i++) {
-			JSONObject set = (JSONObject)set_list.get(i);
-			PCRoomSetMenu setMenuPanel = new PCRoomSetMenu(set, i);
-//					setMenuPanel.addMouseListener(new MouseAdapter() { // 음식 클릭 시 삭제
-//						public void mouseClicked(MouseEvent e) {
-//							PCRoomSetMenu delete_target = (PCRoomSetMenu)e.getSource();
-//							int menuIndex = delete_target.getIndex();
-//							deleteSetMenu(menuIndex);
-//						}
-//					});
-			pcroomSetCategory.add(setMenuPanel);
-		}
-		JScrollPane scrollPane = new JScrollPane(pcroomSetCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		tp.add(scrollPane, pcroomSetCategory.getCategoryName());
 	}
 
 	@Override

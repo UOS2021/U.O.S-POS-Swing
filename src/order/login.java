@@ -37,7 +37,9 @@ public class login {
 	private JTextField textField;
 	private JTextField textField_1;
 	public JPanel this_panel,panel;
+	private JButton exitButton;
 	public Main main;
+	
 
 
 	public login(Main main) {
@@ -52,10 +54,21 @@ public class login {
 		panel = main.getPanel();
 		
 		panel.add(this_panel);
-		this_panel.setBackground(new Color(255, 213, 79));
+		this_panel.setBackground(new Color(255, 200, 79));
 		this_panel.setLayout(null);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		this_panel.setBounds((int)screenSize.getWidth()/2-407, (int)screenSize.getHeight()/2-266, 814, 532);
+		
+		exitButton = new JButton("X");
+		exitButton.setBackground(new Color(255,1,51));
+		exitButton.addActionListener(new ActionListener() {	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		exitButton.setBounds(814-50, 0, 50, 50);
+		this_panel.add(exitButton);
 
 		JLabel lblNewLabel = new JLabel("U.O.F POS");
 		lblNewLabel.setFont(new Font("굴림", Font.PLAIN, 49));

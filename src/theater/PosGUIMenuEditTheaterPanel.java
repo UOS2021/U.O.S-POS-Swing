@@ -157,8 +157,8 @@ public class PosGUIMenuEditTheaterPanel implements ActionListener{
 				inputData.put("movie", "");
 				inputData.put("time", "");
 				inputData.put("theater", "");
-				inputData.put("width", "");
-				inputData.put("height", "");
+				inputData.put("width", 0);
+				inputData.put("height", 0);
 				inputData.put("seat_list", seat_list);
 				// 카테고리리스트, 세트리스트 추가해야됨.				
 				

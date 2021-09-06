@@ -159,24 +159,6 @@ public class PosGUIMenuEditRestaurantPanel implements ActionListener{
 			JScrollPane scrollPane = new JScrollPane(restaurantCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			tp.add(scrollPane, restaurantCategory.getCategoryName());
 		}
-		
-		// 세트 카테고리 추가
-		set_list = info.getSetList();
-		RestaurantSetCategory restaurantSetCategory = new RestaurantSetCategory(set_list);
-		for(int i=0; i<set_list.size(); i++) {
-			JSONObject set = (JSONObject)set_list.get(i);
-			RestaurantSetMenu setMenuPanel = new RestaurantSetMenu(set, i);
-//			setMenuPanel.addMouseListener(new MouseAdapter() { // 음식 클릭 시 삭제
-//				public void mouseClicked(MouseEvent e) {
-//					RestaurantSetMenu delete_target = (RestaurantSetMenu)e.getSource();
-//					int menuIndex = delete_target.getIndex();
-//					deleteSetMenu(menuIndex);
-//				}
-//			});
-			restaurantSetCategory.add(setMenuPanel);
-		}
-		JScrollPane scrollPane = new JScrollPane(restaurantSetCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		tp.add(scrollPane, restaurantSetCategory.getCategoryName());
 	}
 	
 	private void updateCategory() {
@@ -208,24 +190,7 @@ public class PosGUIMenuEditRestaurantPanel implements ActionListener{
 			JScrollPane scrollPane = new JScrollPane(restaurantCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			tp.add(scrollPane, restaurantCategory.getCategoryName());
 		}
-		
-		// 세트 카테고리 추가
-		set_list = info.getSetList();
-		RestaurantSetCategory restaurantSetCategory = new RestaurantSetCategory(set_list);
-		for(int i=0; i<set_list.size(); i++) {
-			JSONObject set = (JSONObject)set_list.get(i);
-			RestaurantSetMenu setMenuPanel = new RestaurantSetMenu(set, i);
-			setMenuPanel.addMouseListener(new MouseAdapter() { // 음식 클릭 시 삭제
-				public void mouseClicked(MouseEvent e) {
-					RestaurantSetMenu delete_target = (RestaurantSetMenu)e.getSource();
-					int menuIndex = delete_target.getIndex();
-					deleteSetMenu(menuIndex);
-				}
-			});
-			restaurantSetCategory.add(setMenuPanel);
-		}
-		JScrollPane scrollPane = new JScrollPane(restaurantSetCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		tp.add(scrollPane, restaurantSetCategory.getCategoryName());
+
 		
 	}
 	

@@ -26,6 +26,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Scanner;
+
+import javax.swing.JFrame;
+
 import java.util.Base64.Encoder;
 
 import org.json.simple.JSONArray;
@@ -43,15 +46,17 @@ public class POSServer extends Thread{
 	public final static int PORT=88;
 	public POSThread POS_Thread;
 	public Object frame;
+	public String type;
 	
 	public ArrayList<String> orderList;
 	public ArrayList<Entry> entryList;
 	
 	
-	public POSServer(Object orderReceivedFrame, ArrayList<String> orderList, ArrayList<Entry> entryList) {
+	public POSServer(String type, Object orderReceivedFrame, ArrayList<String> orderList, ArrayList<Entry> entryList) {
 		this.frame = orderReceivedFrame;
 		this.orderList = orderList;
 		this.entryList = entryList;
+		this.type = type;
 		System.out.println("서버온");
 	}
 	
@@ -60,7 +65,7 @@ public class POSServer extends Thread{
 		try(ServerSocket server = new ServerSocket(PORT)){
 			while(true) {
 				Socket connection = server.accept();
-				POS_Thread = new POSThread(connection, frame, orderList, entryList);
+				POS_Thread = new POSThread(connection, type, frame, orderList, entryList);
 				POS_Thread.start();
 			}
 		} catch(IOException e) {
@@ -80,6 +85,7 @@ class POSThread extends Thread{
 	public boolean check;
 	public boolean whether;
 	public Object frame;
+	public String type;
 	
 	public ArrayList<String> orderList;
 	public ArrayList<Entry> entryList;
@@ -97,12 +103,13 @@ class POSThread extends Thread{
 		order_status = true;
 	}
 	
-	POSThread(Socket connection, Object frame, ArrayList<String> orderList, ArrayList<Entry> entryList) throws IOException {
+	POSThread(Socket connection, String type, Object frame, ArrayList<String> orderList, ArrayList<Entry> entryList) throws IOException {
 		
 		parser = new JSONParser();
 		this.connection = connection;
 		this.check = false;
 		this.frame = frame;
+		this.type = type;
 		this.orderList = orderList;
 		this.entryList = entryList;
 		writer = new PrintWriter((this.connection).getOutputStream(), true);	
@@ -362,7 +369,22 @@ class POSThread extends Thread{
 
 
 	public void code0014() throws FileNotFoundException, IOException, ParseException { // 매장정보 및 주문가능목록
-		JSONObject whole = (JSONObject)(parser.parse(new FileReader("information_theater.json")));
+		
+		JSONObject whole = null;
+		switch (type) {
+		case "패스트푸드/프랜차이즈":
+			whole = (JSONObject)(parser.parse(new FileReader("information_restaurant.json")));
+			break;
+
+		case "영화관":
+			whole = (JSONObject)(parser.parse(new FileReader("information_theater.json")));
+			break;
+
+		case "피시방":
+			whole = (JSONObject)(parser.parse(new FileReader("information_pcroom.json")));
+			break;
+		}
+		//JSONObject whole = (JSONObject)(parser.parse(new FileReader("information_theater.json")));
 		JSONArray categroy_list = ((JSONArray)((JSONObject)whole.get("message")).get("category_list"));
 		
 		// 이미지 주소 -> 이미지 데이터 변경
@@ -371,9 +393,12 @@ class POSThread extends Thread{
 			JSONArray product_list = (JSONArray)category.get("product_list");
 			for(int j=0; j<product_list.size(); j++) {
 				JSONObject product = (JSONObject)product_list.get(j);
-				String image = (String)product.get("image");
-				File QRImage = new File(image);
-				byte[] imageBytes = ImgEncoder.extractBytes("QRCODE.jpg");
+				String imagePath = (String)product.get("image");
+				byte[] imageBytes = ImgEncoder.extractBytes(imagePath);
+				if(imageBytes == null) {
+					product.replace("image", "");
+					return;
+				}
 				byte[] baseEncodingBytes = ImgEncoder.encodingBase64(imageBytes);
 				String  encodedImg = new String(baseEncodingBytes);
 				product.replace("image", encodedImg);

@@ -10,6 +10,9 @@ import java.util.Base64.Encoder;
 public class ImgEncoder {
 	public static byte[] extractBytes(String imageName) throws IOException {
 		File imgPath = new File(imageName);
+		if(!imgPath.exists()) {
+			return null;
+		}
 		FileInputStream fis = null;
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		
