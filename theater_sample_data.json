@@ -1,0 +1,604 @@
+{ 
+    "response_code": "0007" 
+    , "message": 
+    { 
+        "company": 
+        { 
+            "name": "CGV" 
+            , "type": "movie" 
+        } 
+        , "movie_list": 
+        [ 
+            { 
+                "movie": "트랜스포머3" 
+                , "time": "10:00" 
+                , "theater": "1관" 
+                , "width": 4
+                , "height": 4
+                , "seat_list": 
+                [ 
+                    { "code": "A1", "state": 0, "price": 1000 } 
+                    , { "code": "A2", "state": 0, "price": 1000 } 
+                    , { "code": "A3", "state": 0, "price": 1000 } 
+                    , { "code": "A4", "state": 0, "price": 1000 } 
+                    , { "code": "B1", "state": 0, "price": 1000 } 
+                    , { "code": "B4", "state": 0, "price": 1000 } 
+                    , { "code": "C1", "state": 0, "price": 1000 } 
+                    , { "code": "C4", "state": 0, "price": 1000 } 
+                    , { "code": "D1", "state": 0, "price": 1000 } 
+                    , { "code": "D2", "state": 0, "price": 1000 } 
+                    , { "code": "D3", "state": 0, "price": 1000 } 
+                    , { "code": "D4", "state": 0, "price": 1000 } 
+                    , { "code": "E1", "state": 0, "price": 1000 } 
+                    , { "code": "E2", "state": 0, "price": 1000 } 
+                    , { "code": "E3", "state": 0, "price": 1000 } 
+                    , { "code": "E4", "state": 0, "price": 1000 } 
+                ] 
+            }, { 
+    "movie": "인타임" 
+                , "time": "12:00" 
+                , "theater": "3관" 
+                , "width": 3
+                , "height": 3
+                , "seat_list": 
+                [ 
+                    { "code": "A1", "state": 0, "price": 1000 } 
+                    , { "code": "A2", "state": 0, "price": 1000 } 
+                    , { "code": "A3", "state": 0, "price": 1000 } 
+                    , { "code": "B1", "state": 0, "price": 1000 } 
+                    , { "code": "B2", "state": 0, "price": 1000 } 
+                    , { "code": "B3", "state": 0, "price": 1000 } 
+                    , { "code": "C1", "state": 0, "price": 1000 } 
+                    , { "code": "C2", "state": 0, "price": 1000 } 
+                    , { "code": "C3", "state": 0, "price": 1000 } 
+                ] 
+            }, { 
+    "movie": "분노의질주: 더 얼티메이트" 
+                , "time": "15:00" 
+                , "theater": "2관" 
+                , "width": 2
+                , "height": 2
+                , "seat_list": 
+                [ 
+                    { "code": "A1", "state": 0, "price": 1000 } 
+                    , { "code": "A2", "state": 0, "price": 1000 } 
+                    , { "code": "B1", "state": 0, "price": 1000 } 
+                    , { "code": "B2", "state": 0, "price": 1000 } 
+                ] 
+            }, { 
+    "movie": "인셉션" 
+                , "time": "23:00" 
+                , "theater": "9관" 
+                , "width": 10
+                , "height": 10
+                , "seat_list": 
+                [ 
+                    { "code": "A1", "state": 0, "price": 1000 } 
+                    , { "code": "A2", "state": 0, "price": 1000 } 
+                    , { "code": "A3", "state": 0, "price": 1000 } 
+                    , { "code": "A4", "state": 1, "price": 1000 } 
+                    , { "code": "A5", "state": 2, "price": 1000 } 
+                    , { "code": "A6", "state": 0, "price": 1000 } 
+                    , { "code": "A7", "state": 0, "price": 1000 } 
+                    , { "code": "A8", "state": 2, "price": 1000 } 
+                    , { "code": "A9", "state": 1, "price": 1000 } 
+                    , { "code": "A10", "state": 0, "price": 1000 } 
+                    , { "code": "B1", "state": 0, "price": 1000 } 
+                    , { "code": "B2", "state": 0, "price": 1000 } 
+                    , { "code": "B3", "state": 0, "price": 1000 } 
+                    , { "code": "B4", "state": 0, "price": 1000 } 
+                    , { "code": "B5", "state": 0, "price": 1000 } 
+                    , { "code": "B6", "state": 0, "price": 1000 } 
+                    , { "code": "B7", "state": 1, "price": 1000 } 
+                    , { "code": "B8", "state": 1, "price": 1000 } 
+                    , { "code": "B9", "state": 1, "price": 1000 } 
+                    , { "code": "B10", "state": 0, "price": 1000 } 
+                    , { "code": "C1", "state": 0, "price": 1000 } 
+                    , { "code": "C2", "state": 2, "price": 1000 } 
+                    , { "code": "C3", "state": 0, "price": 1000 } 
+                    , { "code": "C4", "state": 2, "price": 1000 } 
+                    , { "code": "C5", "state": 0, "price": 1000 } 
+                    , { "code": "C6", "state": 0, "price": 1000 } 
+                    , { "code": "C7", "state": 0, "price": 1000 } 
+                    , { "code": "C8", "state": 0, "price": 1000 } 
+                    , { "code": "C9", "state": 0, "price": 1000 } 
+                    , { "code": "C10", "state": 0, "price": 1000 } 
+                    , { "code": "D1", "state": 0, "price": 1000 } 
+                    , { "code": "D2", "state": 0, "price": 1000 } 
+                    , { "code": "D3", "state": 0, "price": 1000 } 
+                    , { "code": "D4", "state": 0, "price": 1000 } 
+                    , { "code": "D5", "state": 0, "price": 1000 } 
+                    , { "code": "D6", "state": 0, "price": 1000 } 
+                    , { "code": "D7", "state": 0, "price": 1000 } 
+                    , { "code": "D8", "state": 0, "price": 1000 } 
+                    , { "code": "D9", "state": 0, "price": 1000 } 
+                    , { "code": "D10", "state": 0, "price": 1000 } 
+                    , { "code": "E1", "state": 0, "price": 1000 } 
+                    , { "code": "E2", "state": 0, "price": 1000 } 
+                    , { "code": "E3", "state": 0, "price": 1000 } 
+                    , { "code": "E4", "state": 1, "price": 1000 } 
+                    , { "code": "E5", "state": 1, "price": 1000 } 
+                    , { "code": "E6", "state": 1, "price": 1000 } 
+                    , { "code": "E7", "state": 1, "price": 1000 } 
+                    , { "code": "E8", "state": 1, "price": 1000 } 
+                    , { "code": "E9", "state": 0, "price": 1000 } 
+                    , { "code": "E10", "state": 0, "price": 1000 } 
+                    , { "code": "F1", "state": 0, "price": 1000 } 
+                    , { "code": "F2", "state": 0, "price": 1000 } 
+                    , { "code": "F3", "state": 0, "price": 1000 } 
+                    , { "code": "F4", "state": 0, "price": 1000 } 
+                    , { "code": "F5", "state": 0, "price": 1000 } 
+                    , { "code": "F6", "state": 0, "price": 1000 } 
+                    , { "code": "F7", "state": 0, "price": 1000 } 
+                    , { "code": "F8", "state": 0, "price": 1000 } 
+                    , { "code": "F9", "state": 0, "price": 1000 } 
+                    , { "code": "F10", "state": 1, "price": 1000 } 
+                    , { "code": "G1", "state": 1, "price": 1000 } 
+                    , { "code": "G2", "state": 1, "price": 1000 } 
+                    , { "code": "G3", "state": 0, "price": 1000 } 
+                    , { "code": "G4", "state": 0, "price": 1000 } 
+                    , { "code": "G5", "state": 0, "price": 1000 } 
+                    , { "code": "G6", "state": 0, "price": 1000 } 
+                    , { "code": "G7", "state": 0, "price": 1000 } 
+                    , { "code": "G8", "state": 0, "price": 1000 } 
+                    , { "code": "G9", "state": 0, "price": 1000 } 
+                    , { "code": "G10", "state": 0, "price": 1000 } 
+                    , { "code": "H1", "state": 0, "price": 1000 } 
+                    , { "code": "H2", "state": 0, "price": 1000 } 
+                    , { "code": "H3", "state": 0, "price": 1000 } 
+                    , { "code": "H4", "state": 0, "price": 1000 } 
+                    , { "code": "H5", "state": 0, "price": 1000 } 
+                    , { "code": "H6", "state": 0, "price": 1000 } 
+                    , { "code": "H7", "state": 0, "price": 1000 } 
+                    , { "code": "H8", "state": 0, "price": 1000 } 
+                    , { "code": "H9", "state": 0, "price": 1000 } 
+                    , { "code": "H10", "state": 0, "price": 1000 } 
+                    , { "code": "I1", "state": 0, "price": 1000 } 
+                    , { "code": "I2", "state": 0, "price": 1000 } 
+                    , { "code": "I3", "state": 0, "price": 1000 } 
+                    , { "code": "I4", "state": 0, "price": 1000 } 
+                    , { "code": "I5", "state": 0, "price": 1000 } 
+                    , { "code": "I6", "state": 0, "price": 1000 } 
+                    , { "code": "I7", "state": 0, "price": 1000 } 
+                    , { "code": "I8", "state": 0, "price": 1000 } 
+                    , { "code": "I9", "state": 0, "price": 1000 } 
+                    , { "code": "I10", "state": 0, "price": 1000 } 
+                    , { "code": "J1", "state": 0, "price": 1000 } 
+                    , { "code": "J2", "state": 0, "price": 1000 } 
+                    , { "code": "J3", "state": 0, "price": 1000 } 
+                    , { "code": "J4", "state": 0, "price": 1000 } 
+                    , { "code": "J5", "state": 0, "price": 1000 } 
+                    , { "code": "J6", "state": 0, "price": 1000 } 
+                    , { "code": "J7", "state": 0, "price": 1000 } 
+                    , { "code": "J8", "state": 0, "price": 1000 } 
+                    , { "code": "J9", "state": 0, "price": 1000 } 
+                    , { "code": "J10", "state": 0, "price": 1000 } 
+                ] 
+            } 
+        ] 
+        , "category_list": 
+        [ 
+            { 
+    "category": "세트" 
+                , "product_list": 
+                [ 
+                ] 
+                , "set_list": 
+                [ 
+                    { 
+            "name": "창녕 갈릭 버거 세트" 
+                        , "price": 8500 
+                        , "conf": "버거  후렌치후라이 (M)  콜라 (M)" 
+                        , "desc": "100% 국내산 창녕 햇마늘로 만든 토핑과 마늘 아이올리 30g의 풍미가 육즙을 꽉 가둬낸 순쇠고기 패티 2장과 만나 조화를 이뤄 풍부한 맛" 
+                        , "image": "imagedata" 
+                        , "category_list": 
+                        [ 
+                            { 
+                     "category" : "사이드" 
+                                , "required" : true 
+                                , "product_list": 
+                                [ 
+                                    { 
+                            "name": "맥너겟 4조각 (소스1종 랜덤증정)" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "골든 모짜렐라 치즈스틱 2조각" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                ] 
+                            }, { 
+                     "category" : "음료" 
+                                , "required" : true 
+                                , "product_list": 
+                                [ 
+                                    { 
+                            "name": "코카 콜라 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "환타 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "스프라이트 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "코카 콜라 제로 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "커피 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "바닐라 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "딸기 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "초코 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "드립 커피 미디엄" 
+                                        , "price": 100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                ] 
+                            } 
+                        ] 
+                    }, { 
+            "name": "트리플 치즈버거 세트" 
+                        , "price": 8500 
+                        , "conf": "트리플 치즈버거  후렌치후라이 (M)  콜라 (M)" 
+                        , "desc": "부드러운 치즈와 풍부한 육즙의 패티를 세배 더 진하게 즐길 수 있는 트리플 치즈버거" 
+                        , "image": "imagedata" 
+                        , "category_list": 
+                        [ 
+                            { 
+                     "category" : "사이드" 
+                                , "required" : true 
+                                , "product_list": 
+                                [ 
+                                    { 
+                            "name": "맥너겟 4조각 (소스1종 랜덤증정)" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "골든 모짜렐라 치즈스틱 2조각" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                ] 
+                            }, { 
+                     "category" : "음료" 
+                                , "required" : true 
+                                , "product_list": 
+                                [ 
+                                    { 
+                            "name": "코카 콜라 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "환타 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "스프라이트 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "코카 콜라 제로 미디엄" 
+                                        , "price": 0 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "커피 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "바닐라 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "딸기 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "초코 쉐이크 미디엄" 
+                                        , "price": 1100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                    , { 
+                            "name": "드립 커피 미디엄" 
+                                        , "price": 100 
+                                        , "desc": "추가비용 없음" 
+                                        , "image": "imagedata" 
+                                    } 
+                                ] 
+                            } 
+                        ] 
+                    } 
+                ] 
+            } 
+            , { 
+    "category": "X" 
+                , "product_list": 
+                [ 
+                    { 
+            "name": "몬스터X" 
+                        , "price": 8800 
+                        , "desc": "" 
+                        , "image": "imagedata" 
+                    } 
+                    , { 
+            "name": "통새우X" 
+                        , "price": 8800 
+                        , "desc": "" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "콰트로치즈X" 
+                        , "price": 8800 
+                        , "desc": "" 
+                        , "image": "imagedata" 
+                    } 
+                ] 
+                , "set_list": 
+                [ 
+                ] 
+            } 
+            , { 
+    "category": "와퍼" 
+                , "product_list": 
+                [ 
+                    { 
+            "name": "불고기와퍼" 
+                        , "price": 7000 
+                        , "desc": "불에 직접 구운 순 쇠고기 패티가 들어간 와퍼에 달콤한 불고기 소스까지" 
+                        , "image": "imagedata" 
+                    } 
+                    , { 
+            "name": "새우버거" 
+                        , "price": 2500 
+                        , "desc": "다진 새우 패티가 들어간 버거" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "콰트로치즈와퍼" 
+                        , "price": 7800 
+                        , "desc": "진짜 불맛을 즐겨라, 4가지 고품격 치즈와 불에 직접 구운 와퍼 패티의 만남" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "통새우와퍼" 
+                        , "price": 7800 
+                        , "desc": "직화 방식으로 구운 100% 순쇠고기 패티에 갈릭페퍼 통새우와 스파이시 토마토소스가 더해진 프리미엄 버거" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "베이컨치즈와퍼" 
+                        , "price": 8800 
+                        , "desc": "풍미 가득한 아메리칸 클래식의 완벽한 조화" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "리얼와퍼" 
+                        , "price": 7000 
+                        , "desc": "100% 직화의 원칙, 신선한 재료를 준비하는 원칙, 믿고 먹을 수 있는 와퍼를 지금 버거킹에서 만나보세요" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "몬스터와퍼" 
+                        , "price": 9400 
+                        , "desc": "불맛 가득 순쇠고기, 치킨, 베이컨에 화끈한 디아블로 소스의 압도적인 맛" 
+                        , "image": "imagedata" 
+                    } 
+                ] 
+                , "set_list": 
+                [ 
+                ] 
+            } 
+            , { 
+    "category": "비프&치킨버거" 
+                , "product_list": 
+                [ 
+                    { 
+            "name": "아기상어 새우버거" 
+                        , "price": 4800 
+                        , "desc": "더 통통한 새우로 돌아왔다" 
+                        , "image": "imagedata" 
+                    } 
+                    , { 
+            "name": "엄마상어 새우버거" 
+                        , "price": 5800 
+                        , "desc": "더 통통한 새우로 돌아왔다" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "아빠상어 새우버거" 
+                        , "price": 6800 
+                        , "desc": "더 통통한 새우로 돌아왔다" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "고추장소불고기버거" 
+                        , "price": 5200 
+                        , "desc": "부드러운 소불고기에 매콤함을 더하다" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "직화소불고기버거" 
+                        , "price": 4800 
+                        , "desc": "패티까지 진짜 불고기" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "바비큐킹치킨버거" 
+                        , "price": 3800 
+                        , "desc": "진한 바비큐 소스가 듬뿍" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "롱치킨버거" 
+                        , "price": 5300 
+                        , "desc": "담백한 치킨 패티에 부드러운 마요네즈 소스와 싱싱한 야채가 듬뿍~" 
+                        , "image": "imagedata" 
+                    } 
+                ] 
+                , "set_list": 
+                [ 
+                ] 
+            } 
+            , { 
+    "category": "디저트" 
+                , "product_list": 
+                [ 
+                    { 
+            "name": "오레오 맥플러리" 
+                        , "price": 3200 
+                        , "desc": "우유 듬뿍 신선한 아이스크림에 아삭아삭 오레오 쿠키가 가득" 
+                        , "image": "imagedata" 
+                    } 
+                    , { 
+            "name": "애플파이" 
+                        , "price": 1900 
+                        , "desc": "바각한 파이 속 사과 과육이 아삭, 애플파이" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "딸기 선데이 아이스크림" 
+                        , "price": 2200 
+                        , "desc": "신선한 우유와 딸기가 아이스크림으로 만났다" 
+                        , "image": "imagedata" 
+                    } 
+                ] 
+                , "set_list": 
+                [ 
+                ] 
+            } 
+            , { 
+    "category": "사이드" 
+                , "product_list": 
+                [ 
+                    { 
+            "name": "쉐이킹프라이 구운갈릭" 
+                        , "price": 2700 
+                        , "desc": "구운 마늘의 깊은 풍미" 
+                        , "image": "imagedata" 
+                    } 
+                    , { 
+            "name": "쉐이킹프라이 매콤치즈" 
+                        , "price": 2700 
+                        , "desc": "고소한 치즈맛에 매콤함까지" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "쉐이킹프라이 스윗어니언" 
+                        , "price": 2700 
+                        , "desc": "달콤 고소한 단짠의 정석" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "바삭킹 8조각, 스위트칠리소스" 
+                        , "price": 12100 
+                        , "desc": "매콤하게 바삭하게 튀긴 치킨윙" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "바삭킹 8조각, 까망베르치즈소스" 
+                        , "price": 12100 
+                        , "desc": "매콤하게 바삭하게 튀긴 치킨윙" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "바삭킹 8조각, 디아블로소스" 
+                        , "price": 12100 
+                        , "desc": "매콤하게 바삭하게 튀긴 치킨윙" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "바삭킹 2조각" 
+                        , "price": 3500 
+                        , "desc": "매콤하게 바삭하게 튀긴 치킨윙" 
+                        , "image": "imagedata" 
+                    } 
+                ] 
+                , "set_list": 
+                [ 
+                ] 
+            }, { 
+    "category": "음료" 
+                , "product_list": 
+                [ 
+                    { 
+            "name": "제로톡톡 청포도" 
+                        , "price": 2700 
+                        , "desc": "제로 칼로리 100% 천연 과일향 드링크" 
+                        , "image": "imagedata" 
+                    } 
+                    , { 
+            "name": "아이스 아메리카노" 
+                        , "price": 2700 
+                        , "desc": "RA인증을 받은 자연을 담은 아메리카노" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "아이스초코" 
+                        , "price": 2700 
+                        , "desc": "시원하게 즐기는 진~한 초코" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "씨그램" 
+                        , "price": 2700
+                        , "desc": "" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "코카콜라 L" 
+                        , "price": 2700
+                        , "desc": "코카콜라로 더 짜릿하게" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "코카콜라 제로 L" 
+                        , "price": 2700
+                        , "desc": "100% 짜릿함, 칼로리는 제로" 
+                        , "image": "imagedata" 
+                    }, { 
+            "name": "코카콜라 제로 R" 
+                        , "price": 2500
+                        , "desc": "100% 짜릿함, 칼로리는 제로" 
+                        , "image": "imagedata" 
+                    } 
+                ] 
+                , "set_list": 
+                [ 
+                ] 
+            } 
+        ] 
+    } 
+}
