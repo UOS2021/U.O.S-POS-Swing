@@ -88,7 +88,7 @@ public class select_options {
 		orderList = new ArrayList<>();
 		entryList = new ArrayList<>();
 
-		module1 = new POSServer(main.getCompanyType(),this, orderList, entryList);
+		module1 = new POSServer(main, main.getCompanyType(),this, orderList, entryList);
 		module1.start();
 
 		String[] columnNames = { "순번", "메뉴", "접수시간" };
@@ -118,7 +118,8 @@ public class select_options {
 						int i = t.rowAtPoint(pt);
 						int row = t.convertRowIndexToModel(i);
 						try {
-							Fcm.push(main.getCompanyName(), Integer.toString(row), entryList.get(row).getMyOrder().getFcmToken());
+							System.out.println(entryList.get(row).getMyOrder().getOrderNum());
+							Fcm.push(main.getCompanyName(), entryList.get(row).getMyOrder().getOrderNum(), entryList.get(row).getMyOrder().getFcmToken());
 						} catch (Exception e1) {
 							System.out.println("앙 오류띠");
 							e1.printStackTrace();

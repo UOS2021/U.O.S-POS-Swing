@@ -29,6 +29,7 @@ class order_data {
 	private int total_price;
 	private ArrayList<menu> order_menues;
 	private String fcm_token;
+	private int order_num;
 	
 	public order_data(JSONObject obj) {
 		order_menues = new ArrayList<>();
@@ -36,6 +37,7 @@ class order_data {
 		this.id = (String) message.get("id");
 		this.card_num = (String) ((JSONObject) message.get("card")).get("num");
 		this.fcm_token = (String) message.get("fcm_token");
+		this.order_num = Integer.parseInt(String.valueOf(obj.get("order_num")));
 		JSONArray order = (JSONArray) message.get("order");
 		total_price = 0;
 		int index = 0;
@@ -68,6 +70,10 @@ class order_data {
 	
 	public String getCardNum() {
 		return card_num;
+	}
+	
+	public int getOrderNum() {
+		return order_num;
 	}
 	
 	public int getTotalPrice() {

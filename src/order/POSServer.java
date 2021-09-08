@@ -37,6 +37,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import main.ImgEncoder;
+import main.Main;
 
 
 
@@ -47,16 +48,18 @@ public class POSServer extends Thread{
 	public POSThread POS_Thread;
 	public Object frame;
 	public String type;
+	public Main main;
 	
 	public ArrayList<String> orderList;
 	public ArrayList<Entry> entryList;
 	
 	
-	public POSServer(String type, Object orderReceivedFrame, ArrayList<String> orderList, ArrayList<Entry> entryList) {
+	public POSServer(Main main, String type, Object orderReceivedFrame, ArrayList<String> orderList, ArrayList<Entry> entryList) {
 		this.frame = orderReceivedFrame;
 		this.orderList = orderList;
 		this.entryList = entryList;
 		this.type = type;
+		this.main = main;
 		System.out.println("서버온");
 	}
 	
@@ -65,7 +68,7 @@ public class POSServer extends Thread{
 		try(ServerSocket server = new ServerSocket(PORT)){
 			while(true) {
 				Socket connection = server.accept();
-				POS_Thread = new POSThread(connection, type, frame, orderList, entryList);
+				POS_Thread = new POSThread(main, connection, type, frame, orderList, entryList);
 				POS_Thread.start();
 			}
 		} catch(IOException e) {
@@ -92,10 +95,9 @@ class POSThread extends Thread{
 	public boolean order_status;
 	public static String save_req = "";
 	public static int order_num = 1;
+	public Main main;
 	
-	// 지울 거
-	public static String company_name = "맘스터치";
-	public static String store_type = "Restaurant";
+
 	
 	public void setCheckWhether(boolean check, boolean whether) {
 		this.check = check;
@@ -103,9 +105,10 @@ class POSThread extends Thread{
 		order_status = true;
 	}
 	
-	POSThread(Socket connection, String type, Object frame, ArrayList<String> orderList, ArrayList<Entry> entryList) throws IOException {
+	POSThread(Main main, Socket connection, String type, Object frame, ArrayList<String> orderList, ArrayList<Entry> entryList) throws IOException {
 		
 		parser = new JSONParser();
+		this.main = main;
 		this.connection = connection;
 		this.check = false;
 		this.frame = frame;
@@ -178,7 +181,7 @@ class POSThread extends Thread{
 							int total_price = totalPrice(obj);
 							System.out.println("total price : " + total_price);
 							
-							save_req = ((obj.toString()).replace("0011", "000A")).replace("\"card\":", ("\"company_name\": \"" + company_name + "\", \"total_price\": \"" + total_price +"\", \"card\":"));
+							save_req = ((obj.toString()).replace("0011", "000A")).replace("\"card\":", ("\"company_name\": \"" + main.getCompanyName() + "\", \"total_price\": \"" + total_price +"\", \"card\":"));
 							
 							reponseMaker(connection, "0011");
 							
@@ -214,10 +217,14 @@ class POSThread extends Thread{
 						        out.println(reponse.toString());
 						        System.out.println("결제 성공");
 						        
-						        
-								JSONObject save_req_json = (JSONObject) jsonParse.parse(save_req);
+						        save_req = save_req.replace("message", ("order_num\":" + Integer.parseInt(String.valueOf(((JSONObject) reponse_to_me_obj.get("message")).get("num"))) + ", \"message" ) );
+						        System.out.println("save_req : " + save_req);
+						        JSONObject save_req_json = (JSONObject) jsonParse.parse(save_req);
 						        String listData = findTheMostExpensive(save_req_json);
+						        
+						        
 						        orderList.add(listData);
+						        
 						        
 						        if(frame instanceof OrderReceivedFrame) {
 						        	((OrderReceivedFrame)frame).refreshScrollList();
@@ -228,7 +235,7 @@ class POSThread extends Thread{
 						        
 						        
 						        
-						        entryList.add(new Entry(store_type, save_req_json));
+						        entryList.add(new Entry(main.getCompanyType(), save_req_json));
 						        
 								break;
 								
@@ -387,10 +394,21 @@ class POSThread extends Thread{
 		//JSONObject whole = (JSONObject)(parser.parse(new FileReader("information_theater.json")));
 		JSONArray categroy_list = ((JSONArray)((JSONObject)whole.get("message")).get("category_list"));
 		
+		if(type.equals("영화관")) {
+			for(int i=0; i<categroy_list.size(); i++) {
+				JSONObject category = (JSONObject)categroy_list.get(i);
+				JSONArray set_list = (JSONArray)category.get("set_list");
+				JSONArray product_list = (JSONArray)category.get("product_list");
+				set_list.clear();
+				product_list.clear();
+			}
+		}
+		
 		// 이미지 주소 -> 이미지 데이터 변경
 		for(int i=0;i<categroy_list.size();i++) {
 			JSONObject category = (JSONObject)categroy_list.get(i);
 			JSONArray product_list = (JSONArray)category.get("product_list");
+			JSONArray set_list = (JSONArray)category.get("set_list");
 			for(int j=0; j<product_list.size(); j++) {
 				JSONObject product = (JSONObject)product_list.get(j);
 				String imagePath = (String)product.get("image");
@@ -403,6 +421,20 @@ class POSThread extends Thread{
 				String  encodedImg = new String(baseEncodingBytes);
 				product.replace("image", encodedImg);
 			}
+			
+			// 세트 메뉴 이미지 인코딩
+			for(int j=0; j<set_list.size(); j++) {
+				JSONObject product = (JSONObject)set_list.get(j);
+				String imagePath = (String)product.get("image");
+				byte[] imageBytes = ImgEncoder.extractBytes(imagePath);
+				if(imageBytes == null) {
+					product.replace("image", "");
+					return;
+				}
+				byte[] baseEncodingBytes = ImgEncoder.encodingBase64(imageBytes);
+				String  encodedImg = new String(baseEncodingBytes);
+				product.replace("image", encodedImg);
+			} 
 		}
 		writer.println(whole.toJSONString());
 	}

@@ -145,6 +145,7 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 			JSONObject category = (JSONObject) category_list.get(i);
 			PCRoomCategory pcRoomCategory = new PCRoomCategory(category);
 			JSONArray product_list = (JSONArray) category.get("product_list");
+			JSONArray set_list = (JSONArray)category.get("set_list");
 
 			// 카테고리 안에 메뉴 추가
 			for (int j = 0; j < product_list.size(); j++) {
@@ -160,6 +161,22 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 				});
 				pcRoomCategory.add(menuPanel);
 			}
+			
+			// 카테고리 안에 세트메뉴 추가
+			for(int j=0; j<set_list.size(); j++) {
+				JSONObject setMenu = (JSONObject) set_list.get(j);
+				PCRoomMenu menuPanel = new PCRoomMenu(setMenu, j);
+				menuPanel.addMouseListener(new MouseAdapter() { // 음식 클릭 시 삭제
+					public void mouseClicked(MouseEvent e) {
+						PCRoomMenu delete_target = (PCRoomMenu)e.getSource();
+						int menuIndex = delete_target.getIndex();
+						int categoryIndex = tp.getSelectedIndex();
+						deleteMenu(categoryIndex, menuIndex);
+					}
+				});
+				pcRoomCategory.add(menuPanel);
+			}
+			
 			JScrollPane scrollPane = new JScrollPane(pcRoomCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			tp.add(scrollPane, pcRoomCategory.getCategoryName());
 		}
@@ -196,6 +213,7 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 			JSONObject category = (JSONObject) category_list.get(i);
 			PCRoomCategory pcRoomCategory = new PCRoomCategory(category);
 			JSONArray product_list = (JSONArray) category.get("product_list");
+			JSONArray set_list = (JSONArray)category.get("set_list");
 
 			// 카테고리 안에 메뉴 추가
 			for (int j = 0; j < product_list.size(); j++) {
@@ -212,6 +230,22 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 				pcRoomCategory.add(menuPanel);
 				
 			}
+			
+			// 카테고리 안에 세트메뉴 추가
+			for(int j=0; j<set_list.size(); j++) {
+				JSONObject setMenu = (JSONObject) set_list.get(j);
+				PCRoomMenu menuPanel = new PCRoomMenu(setMenu, j);
+				menuPanel.addMouseListener(new MouseAdapter() { // 음식 클릭 시 삭제
+					public void mouseClicked(MouseEvent e) {
+						PCRoomMenu delete_target = (PCRoomMenu)e.getSource();
+						int menuIndex = delete_target.getIndex();
+						int categoryIndex = tp.getSelectedIndex();
+						deleteMenu(categoryIndex, menuIndex);
+					}
+				});
+				pcRoomCategory.add(menuPanel);
+			}
+			
 			JScrollPane scrollPane = new JScrollPane(pcRoomCategory, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 			tp.add(scrollPane, pcRoomCategory.getCategoryName());
 		}
@@ -273,8 +307,8 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 			String name = nameTF.getText();
 			String price = priceTF.getText();
 			String description = descriptionTF.getText();
-//			String[] arg = fc.getSelectedFile().toString().split("\\\\");
-			String img_url = fc.getSelectedFile().toString();
+			String[] arg = fc.getSelectedFile().toString().split("\\\\");
+			String img_url = "images\\"+arg[arg.length-1];
 			// json에 저장
 			try {
 				JSONParser parser = new JSONParser();
@@ -312,8 +346,10 @@ public class PosGUIMenuEditPCRoomPanel implements ActionListener {
 				// 넣을 데이터 구성
 				JSONObject inputData = new JSONObject();
 				JSONArray product_list = new JSONArray();
+				JSONArray set_list = new JSONArray();
 				inputData.put("category", "추가");
 				inputData.put("product_list", product_list);
+				inputData.put("set_list", set_list);
 
 				// 삽입
 				target_category_list2.add(inputData);
