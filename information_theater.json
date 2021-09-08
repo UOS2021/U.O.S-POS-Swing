@@ -1,1 +1,334 @@
+<<<<<<< HEAD
 {"response_code":"0007","message":{"category_list":[{"set_list":[{"category_list":[{"product_list":[{"image":"imagedata","price":0,"name":"맥너겟 4조각 (소스1종 랜덤증정)","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"골든 모짜렐라 치즈스틱 2조각","desc":"추가비용 없음"}],"category":"사이드","required":true},{"product_list":[{"image":"imagedata","price":0,"name":"코카 콜라 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"환타 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"스프라이트 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"코카 콜라 제로 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"커피 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"바닐라 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"딸기 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"초코 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":100,"name":"드립 커피 미디엄","desc":"추가비용 없음"}],"category":"음료","required":true}],"image":"imagedata","price":8500,"name":"창녕 갈릭 버거 세트","conf":"버거  후렌치후라이 (M)  콜라 (M)","desc":"100% 국내산 창녕 햇마늘로 만든 토핑과 마늘 아이올리 30g의 풍미가 육즙을 꽉 가둬낸 순쇠고기 패티 2장과 만나 조화를 이뤄 풍부한 맛"},{"category_list":[{"product_list":[{"image":"imagedata","price":0,"name":"맥너겟 4조각 (소스1종 랜덤증정)","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"골든 모짜렐라 치즈스틱 2조각","desc":"추가비용 없음"}],"category":"사이드","required":true},{"product_list":[{"image":"imagedata","price":0,"name":"코카 콜라 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"환타 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"스프라이트 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":0,"name":"코카 콜라 제로 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"커피 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"바닐라 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"딸기 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":1100,"name":"초코 쉐이크 미디엄","desc":"추가비용 없음"},{"image":"imagedata","price":100,"name":"드립 커피 미디엄","desc":"추가비용 없음"}],"category":"음료","required":true}],"image":"imagedata","price":8500,"name":"트리플 치즈버거 세트","conf":"트리플 치즈버거  후렌치후라이 (M)  콜라 (M)","desc":"부드러운 치즈와 풍부한 육즙의 패티를 세배 더 진하게 즐길 수 있는 트리플 치즈버거"}],"product_list":[],"category":"세트"},{"set_list":[],"product_list":[{"image":"imagedata","price":8800,"name":"몬스터X","desc":""},{"image":"imagedata","price":8800,"name":"통새우X","desc":""},{"image":"imagedata","price":8800,"name":"콰트로치즈X","desc":""}],"category":"X"},{"set_list":[],"product_list":[{"image":"imagedata","price":7000,"name":"불고기와퍼","desc":"불에 직접 구운 순 쇠고기 패티가 들어간 와퍼에 달콤한 불고기 소스까지"},{"image":"imagedata","price":2500,"name":"새우버거","desc":"다진 새우 패티가 들어간 버거"},{"image":"imagedata","price":7800,"name":"콰트로치즈와퍼","desc":"진짜 불맛을 즐겨라, 4가지 고품격 치즈와 불에 직접 구운 와퍼 패티의 만남"},{"image":"imagedata","price":7800,"name":"통새우와퍼","desc":"직화 방식으로 구운 100% 순쇠고기 패티에 갈릭페퍼 통새우와 스파이시 토마토소스가 더해진 프리미엄 버거"},{"image":"imagedata","price":8800,"name":"베이컨치즈와퍼","desc":"풍미 가득한 아메리칸 클래식의 완벽한 조화"},{"image":"imagedata","price":7000,"name":"리얼와퍼","desc":"100% 직화의 원칙, 신선한 재료를 준비하는 원칙, 믿고 먹을 수 있는 와퍼를 지금 버거킹에서 만나보세요"},{"image":"imagedata","price":9400,"name":"몬스터와퍼","desc":"불맛 가득 순쇠고기, 치킨, 베이컨에 화끈한 디아블로 소스의 압도적인 맛"}],"category":"와퍼"},{"set_list":[],"product_list":[{"image":"imagedata","price":4800,"name":"아기상어 새우버거","desc":"더 통통한 새우로 돌아왔다"},{"image":"imagedata","price":5800,"name":"엄마상어 새우버거","desc":"더 통통한 새우로 돌아왔다"},{"image":"imagedata","price":6800,"name":"아빠상어 새우버거","desc":"더 통통한 새우로 돌아왔다"},{"image":"imagedata","price":5200,"name":"고추장소불고기버거","desc":"부드러운 소불고기에 매콤함을 더하다"},{"image":"imagedata","price":4800,"name":"직화소불고기버거","desc":"패티까지 진짜 불고기"},{"image":"imagedata","price":3800,"name":"바비큐킹치킨버거","desc":"진한 바비큐 소스가 듬뿍"},{"image":"imagedata","price":5300,"name":"롱치킨버거","desc":"담백한 치킨 패티에 부드러운 마요네즈 소스와 싱싱한 야채가 듬뿍~"}],"category":"비프&치킨버거"},{"set_list":[],"product_list":[{"image":"imagedata","price":3200,"name":"오레오 맥플러리","desc":"우유 듬뿍 신선한 아이스크림에 아삭아삭 오레오 쿠키가 가득"},{"image":"imagedata","price":1900,"name":"애플파이","desc":"바각한 파이 속 사과 과육이 아삭, 애플파이"},{"image":"imagedata","price":2200,"name":"딸기 선데이 아이스크림","desc":"신선한 우유와 딸기가 아이스크림으로 만났다"}],"category":"디저트"},{"set_list":[],"product_list":[{"image":"imagedata","price":2700,"name":"쉐이킹프라이 구운갈릭","desc":"구운 마늘의 깊은 풍미"},{"image":"imagedata","price":2700,"name":"쉐이킹프라이 매콤치즈","desc":"고소한 치즈맛에 매콤함까지"},{"image":"imagedata","price":2700,"name":"쉐이킹프라이 스윗어니언","desc":"달콤 고소한 단짠의 정석"},{"image":"imagedata","price":12100,"name":"바삭킹 8조각, 스위트칠리소스","desc":"매콤하게 바삭하게 튀긴 치킨윙"},{"image":"imagedata","price":12100,"name":"바삭킹 8조각, 까망베르치즈소스","desc":"매콤하게 바삭하게 튀긴 치킨윙"},{"image":"imagedata","price":12100,"name":"바삭킹 8조각, 디아블로소스","desc":"매콤하게 바삭하게 튀긴 치킨윙"},{"image":"imagedata","price":3500,"name":"바삭킹 2조각","desc":"매콤하게 바삭하게 튀긴 치킨윙"}],"category":"사이드"},{"set_list":[],"product_list":[{"image":"imagedata","price":2700,"name":"제로톡톡 청포도","desc":"제로 칼로리 100% 천연 과일향 드링크"},{"image":"imagedata","price":2700,"name":"아이스 아메리카노","desc":"RA인증을 받은 자연을 담은 아메리카노"},{"image":"imagedata","price":2700,"name":"아이스초코","desc":"시원하게 즐기는 진~한 초코"},{"image":"imagedata","price":2700,"name":"씨그램","desc":""},{"image":"imagedata","price":2700,"name":"코카콜라 L","desc":"코카콜라로 더 짜릿하게"},{"image":"imagedata","price":2700,"name":"코카콜라 제로 L","desc":"100% 짜릿함, 칼로리는 제로"},{"image":"imagedata","price":2500,"name":"코카콜라 제로 R","desc":"100% 짜릿함, 칼로리는 제로"}],"category":"음료"}],"company":{"name":"CGV","type":"movie"},"movie_list":[{"movie":"트랜스포머3","theater":"1관","width":15,"seat_list":[{"code":"A1","price":7000,"state":0},{"code":"A2","price":7000,"state":0},{"code":"A3","price":7000,"state":2},{"code":"A4","price":7000,"state":0},{"code":"A5","price":7000,"state":0},{"code":"A6","price":7000,"state":2},{"code":"A7","price":7000,"state":0},{"code":"A8","price":7000,"state":0},{"code":"A9","price":7000,"state":2},{"code":"A10","price":7000,"state":0},{"code":"A11","price":7000,"state":0},{"code":"A12","price":7000,"state":2},{"code":"A13","price":7000,"state":0},{"code":"A14","price":7000,"state":0},{"code":"A15","price":7000,"state":2},{"code":"B1","price":7000,"state":0},{"code":"B2","price":7000,"state":0},{"code":"B3","price":7000,"state":2},{"code":"B4","price":7000,"state":0},{"code":"B5","price":7000,"state":0},{"code":"B6","price":7000,"state":2},{"code":"B7","price":7000,"state":0},{"code":"B8","price":7000,"state":0},{"code":"B9","price":7000,"state":2},{"code":"B10","price":7000,"state":0},{"code":"B11","price":7000,"state":0},{"code":"B12","price":7000,"state":2},{"code":"B13","price":7000,"state":0},{"code":"B14","price":7000,"state":0},{"code":"B15","price":7000,"state":2},{"code":"C1","price":7000,"state":0},{"code":"C2","price":7000,"state":0},{"code":"C3","price":7000,"state":2},{"code":"C4","price":7000,"state":0},{"code":"C5","price":7000,"state":0},{"code":"C6","price":7000,"state":2},{"code":"C7","price":7000,"state":0},{"code":"C8","price":7000,"state":0},{"code":"C9","price":7000,"state":2},{"code":"C10","price":7000,"state":0},{"code":"C11","price":7000,"state":0},{"code":"C12","price":7000,"state":2},{"code":"C13","price":7000,"state":0},{"code":"C14","price":7000,"state":0},{"code":"C15","price":7000,"state":2},{"code":"D1","price":7000,"state":0},{"code":"D2","price":7000,"state":0},{"code":"D3","price":7000,"state":2},{"code":"D4","price":7000,"state":0},{"code":"D5","price":7000,"state":0},{"code":"D6","price":7000,"state":2},{"code":"D7","price":7000,"state":0},{"code":"D8","price":7000,"state":0},{"code":"D9","price":7000,"state":2},{"code":"D10","price":7000,"state":0},{"code":"D11","price":7000,"state":0},{"code":"D12","price":7000,"state":2},{"code":"D13","price":7000,"state":0},{"code":"D14","price":7000,"state":0},{"code":"D15","price":7000,"state":2},{"code":"E1","price":7000,"state":0},{"code":"E2","price":7000,"state":0},{"code":"E3","price":7000,"state":2},{"code":"E4","price":7000,"state":0},{"code":"E5","price":7000,"state":0},{"code":"E6","price":7000,"state":2},{"code":"E7","price":7000,"state":0},{"code":"E8","price":7000,"state":0},{"code":"E9","price":7000,"state":2},{"code":"E10","price":7000,"state":0},{"code":"E11","price":7000,"state":0},{"code":"E12","price":7000,"state":2},{"code":"E13","price":7000,"state":0},{"code":"E14","price":7000,"state":0},{"code":"E15","price":7000,"state":2},{"code":"F1","price":7000,"state":0},{"code":"F2","price":7000,"state":0},{"code":"F3","price":7000,"state":2},{"code":"F4","price":7000,"state":0},{"code":"F5","price":7000,"state":0},{"code":"F6","price":7000,"state":2},{"code":"F7","price":7000,"state":0},{"code":"F8","price":7000,"state":0},{"code":"F9","price":7000,"state":2},{"code":"F10","price":7000,"state":0},{"code":"F11","price":7000,"state":0},{"code":"F12","price":7000,"state":2},{"code":"F13","price":7000,"state":0},{"code":"F14","price":7000,"state":0},{"code":"F15","price":7000,"state":2},{"code":"G1","price":7000,"state":0},{"code":"G2","price":7000,"state":0},{"code":"G3","price":7000,"state":2},{"code":"G4","price":7000,"state":0},{"code":"G5","price":7000,"state":0},{"code":"G6","price":7000,"state":2},{"code":"G7","price":7000,"state":0},{"code":"G8","price":7000,"state":0},{"code":"G9","price":7000,"state":2},{"code":"G10","price":7000,"state":0},{"code":"G11","price":7000,"state":0},{"code":"G12","price":7000,"state":2},{"code":"G13","price":7000,"state":0},{"code":"G14","price":7000,"state":0},{"code":"G15","price":7000,"state":2},{"code":"H1","price":7000,"state":0},{"code":"H2","price":7000,"state":0},{"code":"H3","price":7000,"state":2},{"code":"H4","price":7000,"state":0},{"code":"H5","price":7000,"state":0},{"code":"H6","price":7000,"state":2},{"code":"H7","price":7000,"state":0},{"code":"H8","price":7000,"state":0},{"code":"H9","price":7000,"state":2},{"code":"H10","price":7000,"state":0},{"code":"H11","price":7000,"state":0},{"code":"H12","price":7000,"state":2},{"code":"H13","price":7000,"state":0},{"code":"H14","price":7000,"state":0},{"code":"H15","price":7000,"state":2},{"code":"I1","price":7000,"state":0},{"code":"I2","price":7000,"state":0},{"code":"I3","price":7000,"state":2},{"code":"I4","price":7000,"state":0},{"code":"I5","price":7000,"state":0},{"code":"I6","price":7000,"state":2},{"code":"I7","price":7000,"state":0},{"code":"I8","price":7000,"state":0},{"code":"I9","price":7000,"state":2},{"code":"I10","price":7000,"state":0},{"code":"I11","price":7000,"state":0},{"code":"I12","price":7000,"state":2},{"code":"I13","price":7000,"state":0},{"code":"I14","price":7000,"state":0},{"code":"I15","price":7000,"state":2},{"code":"J1","price":7000,"state":0},{"code":"J2","price":7000,"state":0},{"code":"J3","price":7000,"state":2},{"code":"J4","price":7000,"state":0},{"code":"J5","price":7000,"state":0},{"code":"J6","price":7000,"state":2},{"code":"J7","price":7000,"state":0},{"code":"J8","price":7000,"state":0},{"code":"J9","price":7000,"state":2},{"code":"J10","price":7000,"state":0},{"code":"J11","price":7000,"state":0},{"code":"J12","price":7000,"state":2},{"code":"J13","price":7000,"state":0},{"code":"J14","price":7000,"state":0},{"code":"J15","price":7000,"state":2},{"code":"K1","price":7000,"state":0},{"code":"K2","price":7000,"state":0},{"code":"K3","price":7000,"state":2},{"code":"K4","price":7000,"state":0},{"code":"K5","price":7000,"state":0},{"code":"K6","price":7000,"state":2},{"code":"K7","price":7000,"state":0},{"code":"K8","price":7000,"state":0},{"code":"K9","price":7000,"state":2},{"code":"K10","price":7000,"state":0},{"code":"K11","price":7000,"state":0},{"code":"K12","price":7000,"state":2},{"code":"K13","price":7000,"state":0},{"code":"K14","price":7000,"state":0},{"code":"K15","price":7000,"state":2},{"code":"L1","price":7000,"state":0},{"code":"L2","price":7000,"state":0},{"code":"L3","price":7000,"state":2},{"code":"L4","price":7000,"state":0},{"code":"L5","price":7000,"state":0},{"code":"L6","price":7000,"state":2},{"code":"L7","price":7000,"state":0},{"code":"L8","price":7000,"state":0},{"code":"L9","price":7000,"state":2},{"code":"L10","price":7000,"state":0},{"code":"L11","price":7000,"state":0},{"code":"L12","price":7000,"state":2},{"code":"L13","price":7000,"state":0},{"code":"L14","price":7000,"state":0},{"code":"L15","price":7000,"state":2},{"code":"M1","price":7000,"state":0},{"code":"M2","price":7000,"state":0},{"code":"M3","price":7000,"state":2},{"code":"M4","price":7000,"state":0},{"code":"M5","price":7000,"state":0},{"code":"M6","price":7000,"state":2},{"code":"M7","price":7000,"state":0},{"code":"M8","price":7000,"state":0},{"code":"M9","price":7000,"state":2},{"code":"M10","price":7000,"state":0},{"code":"M11","price":7000,"state":0},{"code":"M12","price":7000,"state":2},{"code":"M13","price":7000,"state":0},{"code":"M14","price":7000,"state":0},{"code":"M15","price":7000,"state":2},{"code":"N1","price":7000,"state":0},{"code":"N2","price":7000,"state":0},{"code":"N3","price":7000,"state":2},{"code":"N4","price":7000,"state":0},{"code":"N5","price":7000,"state":0},{"code":"N6","price":7000,"state":2},{"code":"N7","price":7000,"state":0},{"code":"N8","price":7000,"state":0},{"code":"N9","price":7000,"state":2},{"code":"N10","price":7000,"state":0},{"code":"N11","price":7000,"state":0},{"code":"N12","price":7000,"state":2},{"code":"N13","price":7000,"state":0},{"code":"N14","price":7000,"state":0},{"code":"N15","price":7000,"state":2},{"code":"O1","price":7000,"state":0},{"code":"O2","price":7000,"state":0},{"code":"O3","price":7000,"state":2},{"code":"O4","price":7000,"state":0},{"code":"O5","price":7000,"state":0},{"code":"O6","price":7000,"state":2},{"code":"O7","price":7000,"state":0},{"code":"O8","price":7000,"state":0},{"code":"O9","price":7000,"state":2},{"code":"O10","price":7000,"state":0},{"code":"O11","price":7000,"state":0},{"code":"O12","price":7000,"state":2},{"code":"O13","price":7000,"state":0},{"code":"O14","price":7000,"state":0},{"code":"O15","price":7000,"state":2}],"time":"10:00","height":15},{"movie":"인타임","theater":"3관","width":10,"seat_list":[{"code":"A1","price":7000,"state":0},{"code":"A2","price":7000,"state":0},{"code":"A3","price":7000,"state":2},{"code":"A4","price":7000,"state":0},{"code":"A5","price":7000,"state":0},{"code":"A6","price":7000,"state":2},{"code":"A7","price":7000,"state":0},{"code":"A8","price":7000,"state":0},{"code":"A9","price":7000,"state":2},{"code":"A10","price":7000,"state":0},{"code":"B1","price":7000,"state":0},{"code":"B2","price":7000,"state":0},{"code":"B3","price":7000,"state":2},{"code":"B4","price":7000,"state":0},{"code":"B5","price":7000,"state":0},{"code":"B6","price":7000,"state":2},{"code":"B7","price":7000,"state":0},{"code":"B8","price":7000,"state":0},{"code":"B9","price":7000,"state":2},{"code":"B10","price":7000,"state":0},{"code":"C1","price":7000,"state":0},{"code":"C2","price":7000,"state":0},{"code":"C3","price":7000,"state":2},{"code":"C4","price":7000,"state":0},{"code":"C5","price":7000,"state":0},{"code":"C6","price":7000,"state":2},{"code":"C7","price":7000,"state":0},{"code":"C8","price":7000,"state":0},{"code":"C9","price":7000,"state":2},{"code":"C10","price":7000,"state":0},{"code":"D1","price":7000,"state":0},{"code":"D2","price":7000,"state":0},{"code":"D3","price":7000,"state":2},{"code":"D4","price":7000,"state":0},{"code":"D5","price":7000,"state":0},{"code":"D6","price":7000,"state":2},{"code":"D7","price":7000,"state":0},{"code":"D8","price":7000,"state":0},{"code":"D9","price":7000,"state":2},{"code":"D10","price":7000,"state":0},{"code":"E1","price":7000,"state":0},{"code":"E2","price":7000,"state":0},{"code":"E3","price":7000,"state":2},{"code":"E4","price":7000,"state":0},{"code":"E5","price":7000,"state":0},{"code":"E6","price":7000,"state":2},{"code":"E7","price":7000,"state":0},{"code":"E8","price":7000,"state":0},{"code":"E9","price":7000,"state":2},{"code":"E10","price":7000,"state":0},{"code":"F1","price":7000,"state":0},{"code":"F2","price":7000,"state":0},{"code":"F3","price":7000,"state":2},{"code":"F4","price":7000,"state":0},{"code":"F5","price":7000,"state":0},{"code":"F6","price":7000,"state":2},{"code":"F7","price":7000,"state":0},{"code":"F8","price":7000,"state":0},{"code":"F9","price":7000,"state":2},{"code":"F10","price":7000,"state":0},{"code":"G1","price":7000,"state":0},{"code":"G2","price":7000,"state":0},{"code":"G3","price":7000,"state":2},{"code":"G4","price":7000,"state":0},{"code":"G5","price":7000,"state":0},{"code":"G6","price":7000,"state":2},{"code":"G7","price":7000,"state":0},{"code":"G8","price":7000,"state":0},{"code":"G9","price":7000,"state":2},{"code":"G10","price":7000,"state":0},{"code":"H1","price":7000,"state":0},{"code":"H2","price":7000,"state":0},{"code":"H3","price":7000,"state":2},{"code":"H4","price":7000,"state":0},{"code":"H5","price":7000,"state":0},{"code":"H6","price":7000,"state":2},{"code":"H7","price":7000,"state":0},{"code":"H8","price":7000,"state":0},{"code":"H9","price":7000,"state":2},{"code":"H10","price":7000,"state":0},{"code":"I1","price":7000,"state":0},{"code":"I2","price":7000,"state":0},{"code":"I3","price":7000,"state":2},{"code":"I4","price":7000,"state":0},{"code":"I5","price":7000,"state":0},{"code":"I6","price":7000,"state":2},{"code":"I7","price":7000,"state":0},{"code":"I8","price":7000,"state":0},{"code":"I9","price":7000,"state":2},{"code":"I10","price":7000,"state":0},{"code":"J1","price":7000,"state":0},{"code":"J2","price":7000,"state":0},{"code":"J3","price":7000,"state":2},{"code":"J4","price":7000,"state":0},{"code":"J5","price":7000,"state":0},{"code":"J6","price":7000,"state":2},{"code":"J7","price":7000,"state":0},{"code":"J8","price":7000,"state":0},{"code":"J9","price":7000,"state":2},{"code":"J10","price":7000,"state":0}],"time":"12:00","height":10},{"movie":"분노의질주: 더 얼티메이트","theater":"2관","width":10,"seat_list":[{"code":"A1","price":10000,"state":0},{"code":"A2","price":10000,"state":2},{"code":"A3","price":10000,"state":0},{"code":"A4","price":10000,"state":0},{"code":"A5","price":10000,"state":2},{"code":"A6","price":10000,"state":0},{"code":"A7","price":10000,"state":2},{"code":"A8","price":10000,"state":2},{"code":"A9","price":10000,"state":0},{"code":"A10","price":10000,"state":0},{"code":"B1","price":10000,"state":0},{"code":"B2","price":10000,"state":2},{"code":"B3","price":10000,"state":0},{"code":"B4","price":10000,"state":0},{"code":"B5","price":10000,"state":2},{"code":"B6","price":10000,"state":0},{"code":"B7","price":10000,"state":2},{"code":"B8","price":10000,"state":2},{"code":"B9","price":10000,"state":0},{"code":"B10","price":10000,"state":0},{"code":"C1","price":10000,"state":0},{"code":"C2","price":10000,"state":2},{"code":"C3","price":10000,"state":0},{"code":"C4","price":10000,"state":0},{"code":"C5","price":10000,"state":2},{"code":"C6","price":10000,"state":0},{"code":"C7","price":10000,"state":2},{"code":"C8","price":10000,"state":2},{"code":"C9","price":10000,"state":0},{"code":"C10","price":10000,"state":0},{"code":"D1","price":10000,"state":0},{"code":"D2","price":10000,"state":2},{"code":"D3","price":10000,"state":0},{"code":"D4","price":10000,"state":0},{"code":"D5","price":10000,"state":2},{"code":"D6","price":10000,"state":0},{"code":"D7","price":10000,"state":0},{"code":"D8","price":10000,"state":0},{"code":"D9","price":10000,"state":0},{"code":"D10","price":10000,"state":0},{"code":"E1","price":10000,"state":0},{"code":"E2","price":10000,"state":2},{"code":"E3","price":10000,"state":0},{"code":"E4","price":10000,"state":0},{"code":"E5","price":10000,"state":2},{"code":"E6","price":10000,"state":0},{"code":"E7","price":10000,"state":2},{"code":"E8","price":10000,"state":2},{"code":"E9","price":10000,"state":0},{"code":"E10","price":10000,"state":0},{"code":"F1","price":10000,"state":0},{"code":"F2","price":10000,"state":2},{"code":"F3","price":10000,"state":0},{"code":"F4","price":10000,"state":0},{"code":"F5","price":10000,"state":2},{"code":"F6","price":10000,"state":0},{"code":"F7","price":10000,"state":2},{"code":"F8","price":10000,"state":2},{"code":"F9","price":10000,"state":0},{"code":"F10","price":10000,"state":0},{"code":"G1","price":10000,"state":0},{"code":"G2","price":10000,"state":2},{"code":"G3","price":10000,"state":0},{"code":"G4","price":10000,"state":0},{"code":"G5","price":10000,"state":2},{"code":"G6","price":10000,"state":0},{"code":"G7","price":10000,"state":2},{"code":"G8","price":10000,"state":2},{"code":"G9","price":10000,"state":0},{"code":"G10","price":10000,"state":0},{"code":"H1","price":10000,"state":0},{"code":"H2","price":10000,"state":2},{"code":"H3","price":10000,"state":0},{"code":"H4","price":10000,"state":0},{"code":"H5","price":10000,"state":2},{"code":"H6","price":10000,"state":0},{"code":"H7","price":10000,"state":0},{"code":"H8","price":10000,"state":0},{"code":"H9","price":10000,"state":0},{"code":"H10","price":10000,"state":0},{"code":"I1","price":10000,"state":0},{"code":"I2","price":10000,"state":2},{"code":"I3","price":10000,"state":0},{"code":"I4","price":10000,"state":0},{"code":"I5","price":10000,"state":2},{"code":"I6","price":10000,"state":0},{"code":"I7","price":10000,"state":2},{"code":"I8","price":10000,"state":2},{"code":"I9","price":10000,"state":0},{"code":"I10","price":10000,"state":0},{"code":"J1","price":10000,"state":0},{"code":"J2","price":10000,"state":2},{"code":"J3","price":10000,"state":0},{"code":"J4","price":10000,"state":0},{"code":"J5","price":10000,"state":2},{"code":"J6","price":10000,"state":0},{"code":"J7","price":10000,"state":2},{"code":"J8","price":10000,"state":2},{"code":"J9","price":10000,"state":0},{"code":"J10","price":10000,"state":0}],"time":"15:00","height":10},{"movie":"인셉션","theater":"9관","width":10,"seat_list":[{"code":"A1","price":8800,"state":0},{"code":"A2","price":8800,"state":0},{"code":"A3","price":8800,"state":2},{"code":"A4","price":8800,"state":0},{"code":"A5","price":8800,"state":0},{"code":"A6","price":8800,"state":2},{"code":"A7","price":8800,"state":0},{"code":"A8","price":8800,"state":0},{"code":"A9","price":8800,"state":2},{"code":"A10","price":8800,"state":2},{"code":"B1","price":8800,"state":0},{"code":"B2","price":8800,"state":0},{"code":"B3","price":8800,"state":2},{"code":"B4","price":8800,"state":0},{"code":"B5","price":8800,"state":0},{"code":"B6","price":8800,"state":2},{"code":"B7","price":8800,"state":0},{"code":"B8","price":8800,"state":0},{"code":"B9","price":8800,"state":2},{"code":"B10","price":8800,"state":2},{"code":"C1","price":8800,"state":0},{"code":"C2","price":8800,"state":0},{"code":"C3","price":8800,"state":2},{"code":"C4","price":8800,"state":0},{"code":"C5","price":8800,"state":0},{"code":"C6","price":8800,"state":2},{"code":"C7","price":8800,"state":0},{"code":"C8","price":8800,"state":0},{"code":"C9","price":8800,"state":0},{"code":"C10","price":8800,"state":0},{"code":"D1","price":8800,"state":0},{"code":"D2","price":8800,"state":0},{"code":"D3","price":8800,"state":2},{"code":"D4","price":8800,"state":0},{"code":"D5","price":8800,"state":0},{"code":"D6","price":8800,"state":2},{"code":"D7","price":8800,"state":0},{"code":"D8","price":8800,"state":0},{"code":"D9","price":8800,"state":2},{"code":"D10","price":8800,"state":2},{"code":"E1","price":8800,"state":0},{"code":"E2","price":8800,"state":0},{"code":"E3","price":8800,"state":2},{"code":"E4","price":8800,"state":0},{"code":"E5","price":8800,"state":0},{"code":"E6","price":8800,"state":2},{"code":"E7","price":8800,"state":0},{"code":"E8","price":8800,"state":0},{"code":"E9","price":8800,"state":2},{"code":"E10","price":8800,"state":2},{"code":"F1","price":8800,"state":0},{"code":"F2","price":8800,"state":0},{"code":"F3","price":8800,"state":2},{"code":"F4","price":8800,"state":0},{"code":"F5","price":8800,"state":0},{"code":"F6","price":8800,"state":2},{"code":"F7","price":8800,"state":0},{"code":"F8","price":8800,"state":0},{"code":"F9","price":8800,"state":0},{"code":"F10","price":8800,"state":0},{"code":"G1","price":8800,"state":0},{"code":"G2","price":8800,"state":0},{"code":"G3","price":8800,"state":2},{"code":"G4","price":8800,"state":0},{"code":"G5","price":8800,"state":0},{"code":"G6","price":8800,"state":2},{"code":"G7","price":8800,"state":0},{"code":"G8","price":8800,"state":0},{"code":"G9","price":8800,"state":2},{"code":"G10","price":8800,"state":2},{"code":"H1","price":8800,"state":0},{"code":"H2","price":8800,"state":0},{"code":"H3","price":8800,"state":2},{"code":"H4","price":8800,"state":0},{"code":"H5","price":8800,"state":0},{"code":"H6","price":8800,"state":2},{"code":"H7","price":8800,"state":0},{"code":"H8","price":8800,"state":0},{"code":"H9","price":8800,"state":2},{"code":"H10","price":8800,"state":2},{"code":"I1","price":8800,"state":0},{"code":"I2","price":8800,"state":0},{"code":"I3","price":8800,"state":2},{"code":"I4","price":8800,"state":0},{"code":"I5","price":8800,"state":0},{"code":"I6","price":8800,"state":2},{"code":"I7","price":8800,"state":0},{"code":"I8","price":8800,"state":0},{"code":"I9","price":8800,"state":0},{"code":"I10","price":8800,"state":0},{"code":"J1","price":8800,"state":0},{"code":"J2","price":8800,"state":0},{"code":"J3","price":8800,"state":2},{"code":"J4","price":8800,"state":0},{"code":"J5","price":8800,"state":0},{"code":"J6","price":8800,"state":2},{"code":"J7","price":8800,"state":0},{"code":"J8","price":8800,"state":0},{"code":"J9","price":8800,"state":0},{"code":"J10","price":8800,"state":0}],"time":"23:00","height":10},{"movie":"기생충","theater":"5관","width":15,"seat_list":[{"code":"A1","price":8000,"state":0},{"code":"A2","price":8000,"state":0},{"code":"A3","price":8000,"state":2},{"code":"A4","price":8000,"state":0},{"code":"A5","price":8000,"state":0},{"code":"A6","price":8000,"state":2},{"code":"A7","price":8000,"state":0},{"code":"A8","price":8000,"state":0},{"code":"A9","price":8000,"state":0},{"code":"A10","price":8000,"state":0},{"code":"A11","price":8000,"state":0},{"code":"A12","price":8000,"state":0},{"code":"A13","price":8000,"state":0},{"code":"A14","price":8000,"state":0},{"code":"A15","price":8000,"state":0},{"code":"B1","price":8000,"state":0},{"code":"B2","price":8000,"state":0},{"code":"B3","price":8000,"state":2},{"code":"B4","price":8000,"state":0},{"code":"B5","price":8000,"state":0},{"code":"B6","price":8000,"state":2},{"code":"B7","price":8000,"state":0},{"code":"B8","price":8000,"state":0},{"code":"B9","price":8000,"state":0},{"code":"B10","price":8000,"state":0},{"code":"B11","price":8000,"state":0},{"code":"B12","price":8000,"state":0},{"code":"B13","price":8000,"state":0},{"code":"B14","price":8000,"state":0},{"code":"B15","price":8000,"state":0},{"code":"C1","price":8000,"state":0},{"code":"C2","price":8000,"state":0},{"code":"C3","price":8000,"state":2},{"code":"C4","price":8000,"state":0},{"code":"C5","price":8000,"state":0},{"code":"C6","price":8000,"state":2},{"code":"C7","price":8000,"state":0},{"code":"C8","price":8000,"state":0},{"code":"C9","price":8000,"state":0},{"code":"C10","price":8000,"state":0},{"code":"C11","price":8000,"state":0},{"code":"C12","price":8000,"state":0},{"code":"C13","price":8000,"state":0},{"code":"C14","price":8000,"state":0},{"code":"C15","price":8000,"state":0},{"code":"D1","price":8000,"state":0},{"code":"D2","price":8000,"state":0},{"code":"D3","price":8000,"state":2},{"code":"D4","price":8000,"state":0},{"code":"D5","price":8000,"state":0},{"code":"D6","price":8000,"state":2},{"code":"D7","price":8000,"state":0},{"code":"D8","price":8000,"state":0},{"code":"D9","price":8000,"state":0},{"code":"D10","price":8000,"state":0},{"code":"D11","price":8000,"state":0},{"code":"D12","price":8000,"state":0},{"code":"D13","price":8000,"state":0},{"code":"D14","price":8000,"state":0},{"code":"D15","price":8000,"state":0},{"code":"E1","price":8000,"state":0},{"code":"E2","price":8000,"state":0},{"code":"E3","price":8000,"state":2},{"code":"E4","price":8000,"state":0},{"code":"E5","price":8000,"state":0},{"code":"E6","price":8000,"state":2},{"code":"E7","price":8000,"state":0},{"code":"E8","price":8000,"state":0},{"code":"E9","price":8000,"state":0},{"code":"E10","price":8000,"state":0},{"code":"E11","price":8000,"state":0},{"code":"E12","price":8000,"state":0},{"code":"E13","price":8000,"state":0},{"code":"E14","price":8000,"state":0},{"code":"E15","price":8000,"state":0},{"code":"F1","price":8000,"state":0},{"code":"F2","price":8000,"state":0},{"code":"F3","price":8000,"state":2},{"code":"F4","price":8000,"state":0},{"code":"F5","price":8000,"state":0},{"code":"F6","price":8000,"state":2},{"code":"F7","price":8000,"state":0},{"code":"F8","price":8000,"state":0},{"code":"F9","price":8000,"state":0},{"code":"F10","price":8000,"state":0},{"code":"F11","price":8000,"state":0},{"code":"F12","price":8000,"state":0},{"code":"F13","price":8000,"state":0},{"code":"F14","price":8000,"state":0},{"code":"F15","price":8000,"state":0},{"code":"G1","price":8000,"state":0},{"code":"G2","price":8000,"state":0},{"code":"G3","price":8000,"state":2},{"code":"G4","price":8000,"state":0},{"code":"G5","price":8000,"state":0},{"code":"G6","price":8000,"state":2},{"code":"G7","price":8000,"state":0},{"code":"G8","price":8000,"state":0},{"code":"G9","price":8000,"state":0},{"code":"G10","price":8000,"state":0},{"code":"G11","price":8000,"state":0},{"code":"G12","price":8000,"state":0},{"code":"G13","price":8000,"state":0},{"code":"G14","price":8000,"state":0},{"code":"G15","price":8000,"state":0},{"code":"H1","price":8000,"state":0},{"code":"H2","price":8000,"state":0},{"code":"H3","price":8000,"state":2},{"code":"H4","price":8000,"state":0},{"code":"H5","price":8000,"state":0},{"code":"H6","price":8000,"state":2},{"code":"H7","price":8000,"state":0},{"code":"H8","price":8000,"state":0},{"code":"H9","price":8000,"state":0},{"code":"H10","price":8000,"state":0},{"code":"H11","price":8000,"state":0},{"code":"H12","price":8000,"state":0},{"code":"H13","price":8000,"state":0},{"code":"H14","price":8000,"state":0},{"code":"H15","price":8000,"state":0},{"code":"I1","price":8000,"state":0},{"code":"I2","price":8000,"state":0},{"code":"I3","price":8000,"state":2},{"code":"I4","price":8000,"state":0},{"code":"I5","price":8000,"state":0},{"code":"I6","price":8000,"state":2},{"code":"I7","price":8000,"state":0},{"code":"I8","price":8000,"state":0},{"code":"I9","price":8000,"state":0},{"code":"I10","price":8000,"state":0},{"code":"I11","price":8000,"state":0},{"code":"I12","price":8000,"state":0},{"code":"I13","price":8000,"state":0},{"code":"I14","price":8000,"state":0},{"code":"I15","price":8000,"state":0},{"code":"J1","price":8000,"state":0},{"code":"J2","price":8000,"state":0},{"code":"J3","price":8000,"state":2},{"code":"J4","price":8000,"state":0},{"code":"J5","price":8000,"state":0},{"code":"J6","price":8000,"state":2},{"code":"J7","price":8000,"state":0},{"code":"J8","price":8000,"state":0},{"code":"J9","price":8000,"state":0},{"code":"J10","price":8000,"state":0},{"code":"J11","price":8000,"state":0},{"code":"J12","price":8000,"state":0},{"code":"J13","price":8000,"state":0},{"code":"J14","price":8000,"state":0},{"code":"J15","price":8000,"state":0},{"code":"K1","price":8000,"state":0},{"code":"K2","price":8000,"state":0},{"code":"K3","price":8000,"state":2},{"code":"K4","price":8000,"state":0},{"code":"K5","price":8000,"state":0},{"code":"K6","price":8000,"state":2},{"code":"K7","price":8000,"state":0},{"code":"K8","price":8000,"state":0},{"code":"K9","price":8000,"state":0},{"code":"K10","price":8000,"state":0},{"code":"K11","price":8000,"state":0},{"code":"K12","price":8000,"state":0},{"code":"K13","price":8000,"state":0},{"code":"K14","price":8000,"state":0},{"code":"K15","price":8000,"state":0},{"code":"L1","price":8000,"state":0},{"code":"L2","price":8000,"state":0},{"code":"L3","price":8000,"state":2},{"code":"L4","price":8000,"state":0},{"code":"L5","price":8000,"state":0},{"code":"L6","price":8000,"state":2},{"code":"L7","price":8000,"state":0},{"code":"L8","price":8000,"state":0},{"code":"L9","price":8000,"state":0},{"code":"L10","price":8000,"state":0},{"code":"L11","price":8000,"state":0},{"code":"L12","price":8000,"state":0},{"code":"L13","price":8000,"state":0},{"code":"L14","price":8000,"state":0},{"code":"L15","price":8000,"state":0},{"code":"M1","price":8000,"state":0},{"code":"M2","price":8000,"state":0},{"code":"M3","price":8000,"state":2},{"code":"M4","price":8000,"state":0},{"code":"M5","price":8000,"state":0},{"code":"M6","price":8000,"state":2},{"code":"M7","price":8000,"state":0},{"code":"M8","price":8000,"state":0},{"code":"M9","price":8000,"state":0},{"code":"M10","price":8000,"state":0},{"code":"M11","price":8000,"state":0},{"code":"M12","price":8000,"state":0},{"code":"M13","price":8000,"state":0},{"code":"M14","price":8000,"state":0},{"code":"M15","price":8000,"state":0},{"code":"N1","price":8000,"state":0},{"code":"N2","price":8000,"state":0},{"code":"N3","price":8000,"state":2},{"code":"N4","price":8000,"state":0},{"code":"N5","price":8000,"state":0},{"code":"N6","price":8000,"state":2},{"code":"N7","price":8000,"state":0},{"code":"N8","price":8000,"state":0},{"code":"N9","price":8000,"state":0},{"code":"N10","price":8000,"state":0},{"code":"N11","price":8000,"state":0},{"code":"N12","price":8000,"state":0},{"code":"N13","price":8000,"state":0},{"code":"N14","price":8000,"state":0},{"code":"N15","price":8000,"state":0},{"code":"O1","price":8000,"state":0},{"code":"O2","price":8000,"state":0},{"code":"O3","price":8000,"state":2},{"code":"O4","price":8000,"state":0},{"code":"O5","price":8000,"state":0},{"code":"O6","price":8000,"state":2},{"code":"O7","price":8000,"state":0},{"code":"O8","price":8000,"state":0},{"code":"O9","price":8000,"state":0},{"code":"O10","price":8000,"state":0},{"code":"O11","price":8000,"state":0},{"code":"O12","price":8000,"state":0},{"code":"O13","price":8000,"state":0},{"code":"O14","price":8000,"state":0},{"code":"O15","price":8000,"state":0}],"time":"11:30","height":15},{"movie":"","theater":"","width":0,"seat_list":[],"time":"","height":0}]}}
+=======
+{
+  "response_code" : "0008",
+  "message" : {
+    "category_list" : [ {
+      "set_list" : [ {
+        "category_list" : [ {
+          "product_list" : [ {
+            "price" : 1000,
+            "name" : "productname",
+            "desc" : "desc"
+          } ],
+          "category" : "category"
+        } ],
+        "image" : "img",
+        "price" : 1000,
+        "name" : "setname",
+        "conf" : "conf",
+        "desc" : "desc"
+      } ],
+      "product_list" : [ {
+        "image" : "img",
+        "price" : 1000,
+        "name" : "productname",
+        "desc" : "desc"
+      } ],
+      "category" : "category"
+    } ],
+    "company" : {
+      "name" : "companyname",
+      "type" : "movie"
+    },
+    "movie_list" : [ {
+      "movie" : "��ũ����Ʈ",
+      "theater" : "1��",
+      "width" : "3",
+      "seat_list" : [ {
+        "code" : "A1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B2",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "B3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 2
+      } ],
+      "time" : "10:00",
+      "height" : "3"
+    }, {
+      "movie" : "2123123",
+      "theater" : "3",
+      "width" : "4",
+      "seat_list" : [ {
+        "code" : "A1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B2",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "B3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C4",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "D1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D2",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "D3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D4",
+        "price" : 0,
+        "state" : 0
+      } ],
+      "time" : "3",
+      "height" : "4"
+    }, {
+      "movie" : "��ũ����Ʈ",
+      "theater" : "1��",
+      "width" : "4",
+      "seat_list" : [ {
+        "code" : "A1",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "A2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B1",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "B2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 2
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C4",
+        "price" : 0,
+        "state" : 0
+      } ],
+      "time" : "10:00",
+      "height" : "3"
+    }, {
+      "movie" : "333",
+      "theater" : "1",
+      "width" : "5",
+      "seat_list" : [ {
+        "code" : "A1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "A5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "B5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "C5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "D5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "E5",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F1",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F2",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F3",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F4",
+        "price" : 0,
+        "state" : 0
+      }, {
+        "code" : "F5",
+        "price" : 0,
+        "state" : 0
+      } ],
+      "time" : "2",
+      "height" : "6"
+    } ]
+  }
+}
+>>>>>>> 92c99883be07ffccd1a2ffb37e55bb2a02008a56
